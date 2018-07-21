@@ -1,4 +1,4 @@
-# 调度（scheduler）
+# 调度（Scheduler）
 
 #### 资源（Resource）
 
