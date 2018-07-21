@@ -11,11 +11,9 @@
 > * 元组关系演算（行）
 > * 域关系演算（列）
 >
->   关系代数（集合）
+> 关系代数（集合）
 
-
-
-### Reference
+## Reference
 
 * [关系模型](https://zh.wikipedia.org/wiki/关系模型)
 

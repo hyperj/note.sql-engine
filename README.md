@@ -8,7 +8,7 @@ SQL Engine，参考主流开源分布式SQL引擎项目，主要基于Spark SQL 
 
 ![Spark SQL](.gitbook/assets/sparksql.png)
 
-### Others:
+## Others:
 
 * Impala
 * Druid
@@ -17,5 +17,5 @@ SQL Engine，参考主流开源分布式SQL引擎项目，主要基于Spark SQL 
 * Drill
 * TiDB
 * ClickHouse
-* Doris(Palo)
+* Doris\(Palo\)
 

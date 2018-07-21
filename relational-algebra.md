@@ -12,9 +12,7 @@
 
 · · ·
 
-
-
-### Reference
+## Reference
 
 * [关系代数](https://zh.wikipedia.org/wiki/关系代数_%28数据库%29)
 
