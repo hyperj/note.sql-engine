@@ -1,6 +1,6 @@
 # SQL（Catalyst Optimizer）
 
-![](.gitbook/assets/image.png)
+![Catalyst](.gitbook/assets/catalyst.png)
 
 
 

@@ -2,7 +2,7 @@
 
 #### 资源（Resource）
 
-> 计算（CPU\)、IO （Memory、Disk&lt;HD、SSD&gt;、Network）
+> 计算（CPU）、IO（Memory、Disk&lt;HDD、SSD&gt;、Network）
 
 #### 容器（Container）
 

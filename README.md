@@ -6,7 +6,7 @@ SQL Engine，参考主流开源分布式SQL引擎项目，主要基于Spark SQL 
 * [Spark SQL](https://spark.apache.org/sql/): Spark SQL is Apache Spark's module for working with structured data.
 * [Presto](https://prestodb.io/docs/current/): Distributed SQL Query Engine for Big Data.
 
-![Spark SQL](.gitbook/assets/sparksql%20%282%29.png)
+![Spark SQL](.gitbook/assets/sparksql.png)
 
 Others:
 
@@ -17,5 +17,5 @@ Others:
 * Drill
 * TiDB
 * ClickHouse
-* Doris\(Palo\)
+* Doris(Palo)
 
