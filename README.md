@@ -17,5 +17,5 @@ Others:
 * Drill
 * TiDB
 * ClickHouse
-* Doris(Palo)
+* Doris\(Palo\)
 

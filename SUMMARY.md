@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [关系模型（Relational Model）](relational-model.md)
 * [关系代数（Relational Algebra）](relational-algebra.md)
-* [网络（cetwork）](network.md)
+* [网络（Network）](network.md)
 * [调度（Scheduler）](scheduler.md)
 * [存储（Storage）](storage.md)
 * [计算（Compute）](compute.md)

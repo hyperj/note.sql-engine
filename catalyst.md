@@ -2,5 +2,3 @@
 
 ![Catalyst](.gitbook/assets/catalyst.png)
 
-
-
