@@ -1,7 +1,5 @@
 # SQL（Catalyst Optimizer）
 
-
-
 ![Catalyst](.gitbook/assets/catalyst.png)
 
 #### Tree&lt;TreeNode&gt; 
@@ -36,11 +34,17 @@
 
 #### Codegen
 
->
-
 #### Vectorization
 
->
+#### Columnar
+
+#### Session
+
+#### Cache
+
+#### Compression
+
+#### ShuffleService
 
 
 
