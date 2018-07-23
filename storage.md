@@ -6,5 +6,17 @@
 * Memory
 * OffHeap
 * Serialization
-* Relocation
+* Replication
+
+#### Unified Memory Management
+
+#### Tungsten
+
+#### Shuffle
+
+#### 存储格式（Storage Format）
+
+* ORC
+* Parquet
+* CarbonData
 
