@@ -1,4 +1,4 @@
-# SQL（Catalyst Optimizer）
+# SQL Catalyst
 
 ![Catalyst](.gitbook/assets/catalyst.png)
 

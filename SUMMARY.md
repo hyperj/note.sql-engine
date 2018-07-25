@@ -8,5 +8,7 @@
 * [存储（Storage）](storage.md)
 * [计算（Compute）](compute.md)
 * [度量（Metrics）](metrics.md)
-* [SQL（Catalyst Optimizer）](catalyst.md)
+* [SQL Catalyst](catalyst.md)
+* [SQL Case](case.md)
+* [SQL Tuning](tuning.md)
 
