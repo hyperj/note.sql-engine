@@ -8,14 +8,3 @@ SQL Engine，参考主流开源分布式SQL引擎项目，主要基于Spark SQL 
 * [Hive](https://cwiki.apache.org/confluence/display/Hive): The Apache Hive ™ data warehouse software facilitates reading, writing, and managing large datasets residing in distributed storage using SQL. Structure can be projected onto data already in storage. A command line tool and JDBC driver are provided to connect users to Hive.
 * [Presto](https://prestodb.io/docs/current/): Distributed SQL Query Engine for Big Data.
 
-## Others:
-
-* Impala
-* Druid
-* Kylin
-* HAWQ
-* Drill
-* TiDB
-* ClickHouse
-* Doris\(Palo\)
-
