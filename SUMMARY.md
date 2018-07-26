@@ -11,4 +11,6 @@
 * [SQL Catalyst](catalyst.md)
 * [SQL Case](case.md)
 * [SQL Tuning](tuning.md)
+* [Work & Practices](work-and-practices.md)
+* [Projects & Articles](projects-and-articles.md)
 

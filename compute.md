@@ -1,8 +1,8 @@
 # 计算（Compute）
 
-### RDD
+## RDD
 
-#### Characteristics
+### Characteristics
 
 * Partitions
 * PreferredLocations
@@ -10,22 +10,26 @@
 * Iterator
 * Partitioner
 
-#### Operations
+### Operations
 
 * Creation
 * Transformation
 * Storage
 * Action
 
-####  Dependencies
+### Dependencies
 
 * Narrow Dependencies
 * Shuffle/Wide Dependencies
 
-### Stage
+## Stage
 
 * ResultStage
 * ShuffleMapStage
 
-### DAG
+## DAG
+
+## Shuffle
+
+## Reference
 
