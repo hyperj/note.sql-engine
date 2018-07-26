@@ -1,8 +1,15 @@
 # 计算（Compute）
 
-## RDD
+### Pattern
 
-### Characteristics
+* MR、MRM（Map、Reduce、Merge）
+* 可枚举性（Ad hoc、OLAP）、可加性（批量、增量&lt;State&gt;）
+
+### 约束条件（Constraint）
+
+### RDD
+
+#### Characteristics
 
 * Partitions
 * PreferredLocations
@@ -10,26 +17,28 @@
 * Iterator
 * Partitioner
 
-### Operations
+#### Operations
 
 * Creation
 * Transformation
 * Storage
 * Action
 
-### Dependencies
+#### Dependencies
 
 * Narrow Dependencies
 * Shuffle/Wide Dependencies
 
-## Stage
+### Stage
 
 * ResultStage
 * ShuffleMapStage
 
-## DAG
+### DAG
 
-## Shuffle
+### Shuffle
+
+### Tungsten
 
 ## Reference
 
