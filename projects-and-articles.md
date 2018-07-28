@@ -10,6 +10,7 @@
 * TiDB
 * ClickHouse
 * Doris\(Palo\)
+* Tez
 
 ## Articles
 
