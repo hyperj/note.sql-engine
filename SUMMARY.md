@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [引言](retreat.md)
 * [关系模型（Relational Model）](relational-model.md)
 * [关系代数（Relational Algebra）](relational-algebra.md)
 * [网络（Network）](network.md)
