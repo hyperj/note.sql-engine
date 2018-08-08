@@ -38,7 +38,9 @@
 
 ### Shuffle
 
-
+* Read/Write
+* Server/Client
+* Pull/Push
 
 ### Tungsten
 
