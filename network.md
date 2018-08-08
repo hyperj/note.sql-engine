@@ -6,6 +6,16 @@
 * Message：Queue、Pub-Sub（Pull、Push）
 * Multi Broadcast：Gossip（Best Effort、Anti-Entropy&lt;Push、Pull、Push-Pull&gt;、Rumor Mongering）
 
+### 角色（Role） 
+
+Master, Worker, Client, Driver, Executor
+
+### RPC
+
+* Context
+* Env
+* Endpoint
+
 ### 主要作用
 
 * 消息互通：

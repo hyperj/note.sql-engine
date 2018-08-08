@@ -38,7 +38,16 @@
 
 ### Shuffle
 
+
+
 ### Tungsten
+
+* Memory Management and Binary Processing
+* Cache-aware computation
+* Code generation
+* No virtual function dispatches
+* Intermediate data in memory vs CPU registers
+* Loop unrolling and SIMD
 
 ## Reference
 
