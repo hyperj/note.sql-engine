@@ -10,8 +10,6 @@
 
 ### Unified Memory Management
 
-### Tungsten
-
 ### Session
 
 ### Shuffle

@@ -14,5 +14,6 @@
 * [SQL Tuning](tuning.md)
 * [Work & Practices](work-and-practices.md)
 * [Projects & Articles](projects-and-articles.md)
-* [附录（Appendix）](fu-lu-appendix.md)
+* [附录A（Appendix A）](appendix-a.md)
+* [附录B（Appendix B）](fu-lu-bappendix-b.md)
 

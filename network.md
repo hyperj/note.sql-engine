@@ -18,10 +18,10 @@ Master, Worker, Client, Driver, Executor
 
 ### 主要作用
 
-* 消息互通：
-* 文件传输：
-* Block：
-* Shuffle：
+* 消息互通：Status
+* 文件传输：Fetch、Upload
+* Block：Store、Replication
+* Shuffle：Writer、Reader
 
 ## Reference
 
