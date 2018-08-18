@@ -15,5 +15,5 @@
 * [Work & Practices](work-and-practices.md)
 * [Projects & Articles](projects-and-articles.md)
 * [附录A（Appendix A）](appendix-a.md)
-* [附录B（Appendix B）](fu-lu-bappendix-b.md)
+* [附录B（Appendix B）](appendix-b.md)
 
