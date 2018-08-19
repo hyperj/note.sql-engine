@@ -34,6 +34,8 @@
 
 ### Codegen
 
+### Statistics
+
 ### Vectorization
 
 ### Columnar
