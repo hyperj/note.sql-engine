@@ -1,6 +1,6 @@
 # SQL Catalyst
 
-![Catalyst](.gitbook/assets/catalyst.png)
+![Catalyst](assets/images/catalyst.png)
 
 ### Tree&lt;TreeNode&gt;
 
