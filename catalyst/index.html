@@ -37,7 +37,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../assets/images/spark.ico">
+      <link rel="shortcut icon" href="../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.1, mkdocs-material-3.0.3">
     
     
@@ -115,7 +115,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://hyperj.github.io/docs.sql-engine/" title="SQL Engine" class="md-header-nav__button md-logo">
           
-            <img src="../assets/images/spark.ico" width="24" height="24">
+            <img src="../assets/images/favicon.ico" width="24" height="24">
           
         </a>
       </div>
@@ -291,7 +291,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://hyperj.github.io/docs.sql-engine/" title="SQL Engine" class="md-nav__button md-logo">
       
-        <img src="../assets/images/spark.ico" width="48" height="48">
+        <img src="../assets/images/favicon.ico" width="48" height="48">
       
     </a>
     SQL Engine
@@ -961,43 +961,43 @@
                 
                 <h1 id="sql-catalyst">SQL Catalyst<a class="headerlink" href="#sql-catalyst" title="Permanent link">&para;</a></h1>
 <p><img alt="Catalyst" src="../assets/images/catalyst.png" /></p>
-<h3 id="treetreenode">Tree&lt;TreeNode&gt;<a class="headerlink" href="#treetreenode" title="Permanent link">&para;</a></h3>
+<h2 id="treetreenode">Tree&lt;TreeNode&gt;<a class="headerlink" href="#treetreenode" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>UnaryNode、BinaryNode、LeafNode</p>
 </blockquote>
-<h3 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h3>
-<h3 id="parser">Parser<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h3>
+<h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
+<h2 id="parser">Parser<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>SQL、Dataset、DataFrame -&gt; 词法、语法 解析 -&gt; 未绑定的逻辑计划（Relation、Function、Attribute）</p>
 </blockquote>
-<h3 id="analyzer">Analyzer<a class="headerlink" href="#analyzer" title="Permanent link">&para;</a></h3>
+<h2 id="analyzer">Analyzer<a class="headerlink" href="#analyzer" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Catalog、Metastore -&gt; 数据绑定 -&gt; 绑定的逻辑计划</p>
 </blockquote>
-<h3 id="optimizer">Optimizer<a class="headerlink" href="#optimizer" title="Permanent link">&para;</a></h3>
+<h2 id="optimizer">Optimizer<a class="headerlink" href="#optimizer" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>RBO（Rule-Based Optimizer）</p>
 <p>合并、裁剪、谓词下推</p>
 </blockquote>
-<h3 id="planner">Planner<a class="headerlink" href="#planner" title="Permanent link">&para;</a></h3>
+<h2 id="planner">Planner<a class="headerlink" href="#planner" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>策略</p>
 <p>CBO（Cost-Based Optimizer）：Shuffle、Join</p>
 </blockquote>
-<h3 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h3>
+<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
 <blockquote></blockquote>
-<h3 id="codegen">Codegen<a class="headerlink" href="#codegen" title="Permanent link">&para;</a></h3>
-<h3 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h3>
-<h3 id="vectorization">Vectorization<a class="headerlink" href="#vectorization" title="Permanent link">&para;</a></h3>
-<h3 id="columnar">Columnar<a class="headerlink" href="#columnar" title="Permanent link">&para;</a></h3>
-<h3 id="hint">Hint<a class="headerlink" href="#hint" title="Permanent link">&para;</a></h3>
-<h3 id="tungsten">Tungsten<a class="headerlink" href="#tungsten" title="Permanent link">&para;</a></h3>
-<h3 id="adapter">Adapter<a class="headerlink" href="#adapter" title="Permanent link">&para;</a></h3>
-<h3 id="data-source">Data Source<a class="headerlink" href="#data-source" title="Permanent link">&para;</a></h3>
-<h3 id="session">Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h3>
-<h3 id="cache">Cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h3>
-<h3 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h3>
-<h3 id="shuffleservice">ShuffleService<a class="headerlink" href="#shuffleservice" title="Permanent link">&para;</a></h3>
+<h2 id="codegen">Codegen<a class="headerlink" href="#codegen" title="Permanent link">&para;</a></h2>
+<h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
+<h2 id="vectorization">Vectorization<a class="headerlink" href="#vectorization" title="Permanent link">&para;</a></h2>
+<h2 id="columnar">Columnar<a class="headerlink" href="#columnar" title="Permanent link">&para;</a></h2>
+<h2 id="hint">Hint<a class="headerlink" href="#hint" title="Permanent link">&para;</a></h2>
+<h2 id="tungsten">Tungsten<a class="headerlink" href="#tungsten" title="Permanent link">&para;</a></h2>
+<h2 id="adapter">Adapter<a class="headerlink" href="#adapter" title="Permanent link">&para;</a></h2>
+<h2 id="data-source">Data Source<a class="headerlink" href="#data-source" title="Permanent link">&para;</a></h2>
+<h2 id="session">Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h2>
+<h2 id="cache">Cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h2>
+<h2 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h2>
+<h2 id="shuffleservice">ShuffleService<a class="headerlink" href="#shuffleservice" title="Permanent link">&para;</a></h2>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
                 
                   
