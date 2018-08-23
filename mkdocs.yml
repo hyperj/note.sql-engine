@@ -38,8 +38,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/spark.ico
-  logo: assets/images/spark.ico
+  favicon: assets/images/favicon.ico
+  logo: assets/images/favicon.ico
 
 # Customization
 extra:

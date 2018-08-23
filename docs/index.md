@@ -1,6 +1,6 @@
 # Introduction
 
-SQL Engine，参考主流开源分布式SQL引擎项目，主要基于Spark SQL 2.3.x进行整理和说明，以下列出主流开源分布式SQL引擎：
+SQL Engine，参考主流分布式SQL计算引擎开源项目，基于Spark SQL 2.3.x进行整理和说明，以下为主要参考的项目：
 
 ![Spark SQL](assets/images/sparksql.png)
 

@@ -6,5 +6,6 @@
 * Java：JVM、JMM、GC、JIT
 * 分布式：存储、计算、调度、管理、日志
 
+## Reference：
 
-
+* [Computer Science Learning Notes](https://github.com/CyC2018/CS-Notes)

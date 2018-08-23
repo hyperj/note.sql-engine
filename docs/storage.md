@@ -1,6 +1,6 @@
 # 存储（Storage）
 
-### 存储级别（Storage Level）
+## 存储级别（Storage Level）
 
 * Disk
 * Memory
@@ -8,13 +8,25 @@
 * Serialization
 * Replication
 
-### Unified Memory Management
+## Store
 
-### Session
+* Disk
+* Memory
 
-### Shuffle
+## Unified Memory Management
 
-### 存储格式（Storage Format）
+* Execution
+* Storage
+
+## Session
+
+* Metastore
+* Local
+* Global
+
+## Shuffle
+
+## 存储格式（Storage Format）
 
 * ORC
 * Parquet
