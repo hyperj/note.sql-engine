@@ -2,7 +2,7 @@
 
 ![Catalyst](assets/images/catalyst.png)
 
-## Tree&lt;TreeNode&gt;
+## Tree<TreeNode>
 
 > UnaryNode、BinaryNode、LeafNode
 
@@ -10,39 +10,60 @@
 
 ## Parser
 
-> SQL、Dataset、DataFrame -&gt; 词法、语法 解析 -&gt; 未绑定的逻辑计划（Relation、Function、Attribute）
+> SQL、Dataset、DataFrame -> ANTLR(词法、语法<Visitor>) -> 未绑定的逻辑计划（Relation、Function、Attribute）
 
 ## Analyzer
 
-> Catalog、Metastore -&gt; 数据绑定 -&gt; 绑定的逻辑计划
+> Catalog、Metastore、Rule -> 数据绑定 -> 绑定的逻辑计划
 
 ## Optimizer
 
 > RBO（Rule-Based Optimizer）
->
 > 合并、裁剪、谓词下推
 
 ## Planner
 
-> 策略
->
+> 策略（Strategy）
 > CBO（Cost-Based Optimizer）：Shuffle、Join
 
 ## Execution
 
->
+## Tungsten
 
-## Codegen
-
-## Statistics
-
-## Vectorization
+> Memory Management and Binary Processing
+> Cache-aware computation
+> Code generation
+> No virtual function dispatches
+> Intermediate data in memory vs CPU registers
+> Loop unrolling and SIMD
 
 ## Columnar
 
+## Vectorization
+
+> Parquet
+> ORC
+> CarbonData
+
+## Codegen/Janino/JIT
+
+> HashAggregate
+> BroadcastHashJoin
+> SortMergeJoin
+> RDDScan
+> DataSourceScan
+>
+> WholeStageCodegen
+
 ## Hint
 
-## Tungsten
+> Join
+> Shuffle
+
+## Statistics
+
+> Table(sizeInBytes、rowCount、hints)
+> Column(distinctCount、min、max、nullCount、avgLen、maxLen、histogram)
 
 ## Adapter
 

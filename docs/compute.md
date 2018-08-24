@@ -3,7 +3,7 @@
 ## Pattern
 
 * MR、MRM（Map、Reduce、Merge）
-* 可枚举性（Ad hoc、OLAP）、可加性（批量、增量&lt;State&gt;）
+* 可枚举性（Ad hoc、OLAP）、可加性（批量、增量<State>）
 
 ## 约束条件（Constraint）
 

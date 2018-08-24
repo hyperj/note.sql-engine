@@ -2,15 +2,15 @@
 
 ## 资源（Resource）
 
-> 计算（CPU）、IO（Memory、Disk&lt;HDD、SSD&gt;、Network）
+> 计算（CPU、GPU）、IO（Memory、Disk<HDD、SSD>、Network）
 
 ## 容器（Container）
 
-> 资源隔离（Resource Isolation&lt;CGroup&gt;）、生命周期（Life Cycle）
+> 资源隔离（Resource Isolation<CGroup>）、生命周期（Life Cycle）
 
 ## 资源分配（Allocation）
 
-> 全量（Gang&lt;MPP&gt;）、增量（Incremental&lt;DAG&gt;）
+> 全量（Gang<MPP>）、增量（Incremental<DAG>）
 
 ## 调度策略（Strategy）
 
@@ -26,7 +26,7 @@
 
 ## 调度架构（Architecture）
 
-> 集中调度（Monolithic&lt;Kubernetes&gt;）、两级调度（Two Level&lt;Yarn、Mesos&gt;）、共享状态调度（Shared State&lt;Omega&gt;）、全分布式调度、混合调度
+> 集中调度（Monolithic<Kubernetes>）、两级调度（Two Level<Yarn、Mesos>）、共享状态调度（Shared State<Omega>）、全分布式调度、混合调度
 
 ## 约束条件（Constraint）
 

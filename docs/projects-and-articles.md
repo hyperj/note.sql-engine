@@ -9,7 +9,7 @@
 * Drill
 * TiDB
 * ClickHouse
-* Doris\(Palo\)
+* Doris(Palo)
 * Tez
 
 ## Articles

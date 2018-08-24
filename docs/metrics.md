@@ -21,5 +21,14 @@
 
 ## Web UI & REST API
 
+* Applications
+* Jobs
+* Stages
+* Executors
+* Storage
+* Environment
+* Streaming
+* SQL
+
 ## Reference
 

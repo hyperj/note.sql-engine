@@ -4,10 +4,12 @@
 
 ### Application
 
-| 参数 | 含义 | 默认 | 推荐 |
-| :--- | :--- | :--- | :--- |
-| spark.driver.memory |  |  |  |
-| spark.executor.memory |  |  |  |
+| 名称 | 版本 | 默认值 | 推荐值 | 含义 |
+| :--- | :--- | :--- | :--- | :--- |
+| spark.driver.memory | - | 1g | 2g, 4g | Driver 内存 |
+| spark.driver.cores | - | 1 | 2, 4 | Driver 核数 |
+| spark.executor.memory | - | 1g | 4g, 16g | Executor 内存 |
+| spark.executor.cores | - | 1 | 2, 8 | Executor 核数 |
 
 ## Reference
 
