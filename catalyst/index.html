@@ -962,64 +962,64 @@
                 <h1 id="sql-catalyst">SQL Catalyst<a class="headerlink" href="#sql-catalyst" title="Permanent link">&para;</a></h1>
 <p><img alt="Catalyst" src="../assets/images/catalyst.png" /></p>
 <h2 id="tree">Tree<TreeNode><a class="headerlink" href="#tree" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>UnaryNode、BinaryNode、LeafNode</p>
-</blockquote>
+<ul>
+<li>UnaryNode、BinaryNode、LeafNode</li>
+</ul>
 <h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
 <h2 id="parser">Parser<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>SQL、Dataset、DataFrame -&gt; ANTLR(词法、语法<Visitor>) -&gt; 未绑定的逻辑计划（Relation、Function、Attribute）</p>
-</blockquote>
+<ul>
+<li>SQL、Dataset、DataFrame -&gt; ANTLR(词法、语法<Visitor>) -&gt; 未绑定的逻辑计划（Relation、Function、Attribute）</li>
+</ul>
 <h2 id="analyzer">Analyzer<a class="headerlink" href="#analyzer" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Catalog、Metastore、Rule -&gt; 数据绑定 -&gt; 绑定的逻辑计划</p>
-</blockquote>
+<ul>
+<li>Catalog、Metastore、Rule -&gt; 数据绑定 -&gt; 绑定的逻辑计划</li>
+</ul>
 <h2 id="optimizer">Optimizer<a class="headerlink" href="#optimizer" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>RBO（Rule-Based Optimizer）
-合并、裁剪、谓词下推</p>
-</blockquote>
+<ul>
+<li>RBO（Rule-Based Optimizer）</li>
+<li>合并、裁剪、谓词下推</li>
+</ul>
 <h2 id="planner">Planner<a class="headerlink" href="#planner" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>策略（Strategy）
-CBO（Cost-Based Optimizer）：Shuffle、Join</p>
-</blockquote>
+<ul>
+<li>策略（Strategy）</li>
+<li>CBO（Cost-Based Optimizer）：Shuffle、Join</li>
+</ul>
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
 <h2 id="tungsten">Tungsten<a class="headerlink" href="#tungsten" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Memory Management and Binary Processing
-Cache-aware computation
-Code generation
-No virtual function dispatches
-Intermediate data in memory vs CPU registers
-Loop unrolling and SIMD</p>
-</blockquote>
+<ul>
+<li>Memory Management and Binary Processing</li>
+<li>Cache-aware computation</li>
+<li>Code generation</li>
+<li>No virtual function dispatches</li>
+<li>Intermediate data in memory vs CPU registers</li>
+<li>Loop unrolling and SIMD</li>
+</ul>
 <h2 id="columnar">Columnar<a class="headerlink" href="#columnar" title="Permanent link">&para;</a></h2>
 <h2 id="vectorization">Vectorization<a class="headerlink" href="#vectorization" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Parquet
-ORC
-CarbonData</p>
-</blockquote>
+<ul>
+<li>Parquet</li>
+<li>ORC</li>
+<li>CarbonData</li>
+</ul>
 <h2 id="codegenjaninojit">Codegen/Janino/JIT<a class="headerlink" href="#codegenjaninojit" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>HashAggregate
-BroadcastHashJoin
-SortMergeJoin
-RDDScan
-DataSourceScan</p>
-<p>WholeStageCodegen</p>
-</blockquote>
+<ul>
+<li>HashAggregate</li>
+<li>BroadcastHashJoin</li>
+<li>SortMergeJoin</li>
+<li>RDDScan</li>
+<li>DataSourceScan</li>
+<li>WholeStageCodegen</li>
+</ul>
 <h2 id="hint">Hint<a class="headerlink" href="#hint" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Join
-Shuffle</p>
-</blockquote>
+<ul>
+<li>Join</li>
+<li>Shuffle</li>
+</ul>
 <h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Table(sizeInBytes、rowCount、hints)
-Column(distinctCount、min、max、nullCount、avgLen、maxLen、histogram)</p>
-</blockquote>
+<ul>
+<li>Table(sizeInBytes、rowCount、hints)</li>
+<li>Column(distinctCount、min、max、nullCount、avgLen、maxLen、histogram)</li>
+</ul>
 <h2 id="adapter">Adapter<a class="headerlink" href="#adapter" title="Permanent link">&para;</a></h2>
 <h2 id="data-source">Data Source<a class="headerlink" href="#data-source" title="Permanent link">&para;</a></h2>
 <h2 id="session">Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h2>
