@@ -507,8 +507,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#treetreenode" title="Tree&lt;TreeNode&gt;" class="md-nav__link">
-    Tree&lt;TreeNode&gt;
+  <a href="#tree" title="Tree" class="md-nav__link">
+    Tree
   </a>
   
 </li>
@@ -556,22 +556,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#codegen" title="Codegen" class="md-nav__link">
-    Codegen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statistics" title="Statistics" class="md-nav__link">
-    Statistics
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vectorization" title="Vectorization" class="md-nav__link">
-    Vectorization
+  <a href="#tungsten" title="Tungsten" class="md-nav__link">
+    Tungsten
   </a>
   
 </li>
@@ -584,6 +570,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#vectorization" title="Vectorization" class="md-nav__link">
+    Vectorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codegenjaninojit" title="Codegen/Janino/JIT" class="md-nav__link">
+    Codegen/Janino/JIT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hint" title="Hint" class="md-nav__link">
     Hint
   </a>
@@ -591,8 +591,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tungsten" title="Tungsten" class="md-nav__link">
-    Tungsten
+  <a href="#statistics" title="Statistics" class="md-nav__link">
+    Statistics
   </a>
   
 </li>
@@ -803,8 +803,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#treetreenode" title="Tree&lt;TreeNode&gt;" class="md-nav__link">
-    Tree&lt;TreeNode&gt;
+  <a href="#tree" title="Tree" class="md-nav__link">
+    Tree
   </a>
   
 </li>
@@ -852,22 +852,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#codegen" title="Codegen" class="md-nav__link">
-    Codegen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statistics" title="Statistics" class="md-nav__link">
-    Statistics
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vectorization" title="Vectorization" class="md-nav__link">
-    Vectorization
+  <a href="#tungsten" title="Tungsten" class="md-nav__link">
+    Tungsten
   </a>
   
 </li>
@@ -880,6 +866,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#vectorization" title="Vectorization" class="md-nav__link">
+    Vectorization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codegenjaninojit" title="Codegen/Janino/JIT" class="md-nav__link">
+    Codegen/Janino/JIT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hint" title="Hint" class="md-nav__link">
     Hint
   </a>
@@ -887,8 +887,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tungsten" title="Tungsten" class="md-nav__link">
-    Tungsten
+  <a href="#statistics" title="Statistics" class="md-nav__link">
+    Statistics
   </a>
   
 </li>
@@ -961,37 +961,65 @@
                 
                 <h1 id="sql-catalyst">SQL Catalyst<a class="headerlink" href="#sql-catalyst" title="Permanent link">&para;</a></h1>
 <p><img alt="Catalyst" src="../assets/images/catalyst.png" /></p>
-<h2 id="treetreenode">Tree&lt;TreeNode&gt;<a class="headerlink" href="#treetreenode" title="Permanent link">&para;</a></h2>
+<h2 id="tree">Tree<TreeNode><a class="headerlink" href="#tree" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>UnaryNode、BinaryNode、LeafNode</p>
 </blockquote>
 <h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
 <h2 id="parser">Parser<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>SQL、Dataset、DataFrame -&gt; 词法、语法 解析 -&gt; 未绑定的逻辑计划（Relation、Function、Attribute）</p>
+<p>SQL、Dataset、DataFrame -&gt; ANTLR(词法、语法<Visitor>) -&gt; 未绑定的逻辑计划（Relation、Function、Attribute）</p>
 </blockquote>
 <h2 id="analyzer">Analyzer<a class="headerlink" href="#analyzer" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Catalog、Metastore -&gt; 数据绑定 -&gt; 绑定的逻辑计划</p>
+<p>Catalog、Metastore、Rule -&gt; 数据绑定 -&gt; 绑定的逻辑计划</p>
 </blockquote>
 <h2 id="optimizer">Optimizer<a class="headerlink" href="#optimizer" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>RBO（Rule-Based Optimizer）</p>
-<p>合并、裁剪、谓词下推</p>
+<p>RBO（Rule-Based Optimizer）
+合并、裁剪、谓词下推</p>
 </blockquote>
 <h2 id="planner">Planner<a class="headerlink" href="#planner" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>策略</p>
-<p>CBO（Cost-Based Optimizer）：Shuffle、Join</p>
+<p>策略（Strategy）
+CBO（Cost-Based Optimizer）：Shuffle、Join</p>
 </blockquote>
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
-<blockquote></blockquote>
-<h2 id="codegen">Codegen<a class="headerlink" href="#codegen" title="Permanent link">&para;</a></h2>
-<h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
-<h2 id="vectorization">Vectorization<a class="headerlink" href="#vectorization" title="Permanent link">&para;</a></h2>
-<h2 id="columnar">Columnar<a class="headerlink" href="#columnar" title="Permanent link">&para;</a></h2>
-<h2 id="hint">Hint<a class="headerlink" href="#hint" title="Permanent link">&para;</a></h2>
 <h2 id="tungsten">Tungsten<a class="headerlink" href="#tungsten" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Memory Management and Binary Processing
+Cache-aware computation
+Code generation
+No virtual function dispatches
+Intermediate data in memory vs CPU registers
+Loop unrolling and SIMD</p>
+</blockquote>
+<h2 id="columnar">Columnar<a class="headerlink" href="#columnar" title="Permanent link">&para;</a></h2>
+<h2 id="vectorization">Vectorization<a class="headerlink" href="#vectorization" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Parquet
+ORC
+CarbonData</p>
+</blockquote>
+<h2 id="codegenjaninojit">Codegen/Janino/JIT<a class="headerlink" href="#codegenjaninojit" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>HashAggregate
+BroadcastHashJoin
+SortMergeJoin
+RDDScan
+DataSourceScan</p>
+<p>WholeStageCodegen</p>
+</blockquote>
+<h2 id="hint">Hint<a class="headerlink" href="#hint" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Join
+Shuffle</p>
+</blockquote>
+<h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Table(sizeInBytes、rowCount、hints)
+Column(distinctCount、min、max、nullCount、avgLen、maxLen、histogram)</p>
+</blockquote>
 <h2 id="adapter">Adapter<a class="headerlink" href="#adapter" title="Permanent link">&para;</a></h2>
 <h2 id="data-source">Data Source<a class="headerlink" href="#data-source" title="Permanent link">&para;</a></h2>
 <h2 id="session">Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h2>
