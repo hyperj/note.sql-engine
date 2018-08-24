@@ -18,7 +18,7 @@ Master, Worker, Client, Driver, Executor
 
 ## 主要作用
 
-* 消息互通：Status
+* 消息互通：Event、Status
 * 文件传输：Fetch、Upload
 * Block：Store、Replication
 * Shuffle：Writer、Reader
