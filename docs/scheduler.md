@@ -2,35 +2,52 @@
 
 ## 资源（Resource）
 
-> 计算（CPU、GPU）、IO（Memory、Disk<HDD、SSD>、Network）
+* 计算（CPU、GPU）
+* IO（Memory、Disk<HDD、SSD>、Network）
 
 ## 容器（Container）
 
-> 资源隔离（Resource Isolation<CGroup>）、生命周期（Life Cycle）
+* 资源隔离（Resource Isolation<CGroup>）
+* 生命周期（Life Cycle）
 
 ## 资源分配（Allocation）
 
-> 全量（Gang<MPP>）、增量（Incremental<DAG>）
+* 全量（Gang<MPP>）
+* 增量（Incremental<DAG>）
 
 ## 调度策略（Strategy）
 
-> FIFO ，Capacity，Fair，Delay、DRF（Domainant Reource Fair）
+* FIFO 
+* Capacity
+* Fair
+* Delay
+* DRF（Domainant Reource Fair）
 
 ## 调度算法（Algorithm）
 
-> First Fitness、贪心算法、动态规划、Graph Base（Firmament）、强化学习
+* First Fitness
+* 贪心算法
+* 动态规划
+* Graph Base（Firmament）
+* 强化学习
 
 ## 调度模型（Pattern）
 
-> 资源（Yarn、Mesos、Kubernetes）、作业（Oozie、Airflow、Azkaban）、任务（Spark、TEZ、Presto）
+* 资源（Yarn、Mesos、Kubernetes）
+* 作业（Oozie、Airflow、Azkaban）
+* 任务（Spark、TEZ、Presto）
 
 ## 调度架构（Architecture）
 
-> 集中调度（Monolithic<Kubernetes>）、两级调度（Two Level<Yarn、Mesos>）、共享状态调度（Shared State<Omega>）、全分布式调度、混合调度
+* 集中调度（Monolithic<Kubernetes>）
+* 两级调度（Two Level<Yarn、Mesos>）
+* 共享状态调度（Shared State<Omega>）
+* 全分布式调度
+* 混合调度
 
 ## 约束条件（Constraint）
 
-> 资源异质性、负载异质性、亲和与反亲和、数据依赖、数据本地性、资源利用率、资源隔离、公平性、优先级、SLA、饥饿与活锁、容错
+* 资源异质性、负载异质性、亲和与反亲和、数据依赖、数据本地性、资源利用率、资源隔离、公平性、优先级、SLA、饥饿与活锁、容错
 
 ## Reference：
 
