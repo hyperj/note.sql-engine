@@ -21,10 +21,14 @@
 ## Session
 
 * Metastore
-* Local
-* Global
+* Local Session
+* Global Session
 
 ## Shuffle
+
+* Read/Write
+* Server/Client
+* Pull/Push
 
 ## 存储格式（Storage Format）
 

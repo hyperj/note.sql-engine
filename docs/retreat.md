@@ -9,3 +9,4 @@
 ## Reference：
 
 * [Computer Science Learning Notes](https://github.com/CyC2018/CS-Notes)
+* [数据库内核月报](http://mysql.taobao.org/monthly/)

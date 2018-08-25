@@ -3,7 +3,7 @@
 ## 资源（Resource）
 
 * 计算（CPU、GPU）
-* IO（Memory、Disk<HDD、SSD>、Network）
+* I/O（Memory、Disk<SSD、HDD、HHD>、Network、RAID、HBA）
 
 ## 容器（Container）
 

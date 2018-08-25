@@ -2,15 +2,19 @@
 
 ## Projects
 
-* Impala
-* Druid
-* Kylin
-* HAWQ
-* Drill
-* TiDB
-* ClickHouse
-* Doris(Palo)
-* Tez
+* [Impala](https://impala.apache.org/)
+* [Druid](http://druid.io/)
+* [Kylin](https://kylin.apache.org/)
+* [HAWQ](https://hawq.apache.org/)
+* [Drill](https://drill.apache.org/)
+* [TiDB](https://pingcap.com/index.html)
+* [ClickHouse](https://clickhouse.yandex/)
+* [Doris(Palo)](https://github.com/baidu/palo)
+* [Tez](https://tez.apache.org/)
+
+## Papers
+
+* [Spark SQL: Relational Data Processing in Spark](https://amplab.cs.berkeley.edu/publication/spark-sql-relational-data-processing-in-spark/)
 
 ## Articles
 
