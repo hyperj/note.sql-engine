@@ -712,6 +712,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mapreduce" title="MapReduce" class="md-nav__link">
+    MapReduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="HDFS" class="md-nav__link">
+    HDFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jvm" title="JVM" class="md-nav__link">
+    JVM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" title="Reference" class="md-nav__link">
     Reference
   </a>
@@ -864,6 +885,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mapreduce" title="MapReduce" class="md-nav__link">
+    MapReduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hdfs" title="HDFS" class="md-nav__link">
+    HDFS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jvm" title="JVM" class="md-nav__link">
+    JVM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" title="Reference" class="md-nav__link">
     Reference
   </a>
@@ -888,7 +930,7 @@
                 
                 
                 <h1 id="aappendix-a">附录A（Appendix A）<a class="headerlink" href="#aappendix-a" title="Permanent link">&para;</a></h1>
-<p>Application -1:n-&gt; Job -1:n-&gt; Stage 依赖单元</p>
+<p>Application -1:1-&gt; Session(Context) -1:n-&gt; Job -1:n-&gt; Stage 依赖单元</p>
 <p>Task 执行单元 -1:1-&gt; Partition 计算单元 -1:n-&gt; Block 存储单元</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <h3 id="application-properties">Application Properties<a class="headerlink" href="#application-properties" title="Permanent link">&para;</a></h3>
@@ -972,7 +1014,7 @@
 <td align="left">-</td>
 <td align="left">false</td>
 <td align="left">true</td>
-<td align="left">自适应查询执行（Broadcast、Partition（Skew））</td>
+<td align="left">自适应查询执行（Broadcast、Partition、Skew）</td>
 </tr>
 <tr>
 <td align="left">spark.sql.adaptive.shuffle.targetPostShuffleInputSize</td>
@@ -992,6 +1034,43 @@
 </table>
 <h2 id="yarn">Yarn<a class="headerlink" href="#yarn" title="Permanent link">&para;</a></h2>
 <h2 id="hive">Hive<a class="headerlink" href="#hive" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">版本</th>
+<th align="left">默认值</th>
+<th align="left">推荐值</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">hive.exec.dynamic.partition</td>
+<td align="left">-</td>
+<td align="left">false</td>
+<td align="left">true</td>
+<td align="left">允许动态分区</td>
+</tr>
+<tr>
+<td align="left">hive.exec.dynamic.partition.mode</td>
+<td align="left">-</td>
+<td align="left">strict</td>
+<td align="left">nonstrict</td>
+<td align="left">动态分区模式</td>
+</tr>
+<tr>
+<td align="left">hive.exec.max.dynamic.partitions</td>
+<td align="left">-</td>
+<td align="left">1000</td>
+<td align="left">100-1000</td>
+<td align="left">允许创建最大分区数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mapreduce">MapReduce<a class="headerlink" href="#mapreduce" title="Permanent link">&para;</a></h2>
+<h2 id="hdfs">HDFS<a class="headerlink" href="#hdfs" title="Permanent link">&para;</a></h2>
+<h2 id="jvm">JVM<a class="headerlink" href="#jvm" title="Permanent link">&para;</a></h2>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://spark.apache.org/docs/latest/configuration.html">Spark Configuration</a></li>
