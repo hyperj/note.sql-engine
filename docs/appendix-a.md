@@ -1,6 +1,6 @@
 # 附录A（Appendix A）
 
-Application -1:n-> Job -1:n-> Stage 依赖单元
+Application -1:1-> Session(Context) -1:n-> Job -1:n-> Stage 依赖单元
 
 Task 执行单元 -1:1-> Partition 计算单元 -1:n-> Block 存储单元
 
@@ -37,13 +37,25 @@ Task 执行单元 -1:1-> Partition 计算单元 -1:n-> Block 存储单元
 | :--- | :--- | :--- | :--- | :--- |
 | spark.sql.shuffle.partitions | - | 200 | 20, 400 | Shuffle分区数量（Join、Aggr） |
 | spark.sql.autoBroadcastJoinThreshold | - | 10L * 1024 * 1024 | (32, 64) * 1024 * 1024 | 自动优化为BroadcastJoin阈值 |
-| spark.sql.adaptive.enabled | - | false | true | 自适应查询执行（Broadcast、Partition（Skew）） |
+| spark.sql.adaptive.enabled | - | false | true | 自适应查询执行（Broadcast、Partition、Skew） |
 | spark.sql.adaptive.shuffle.targetPostShuffleInputSize | - | 64 * 1024 * 1024 | (32, 128) * 1024 * 1024 | Shuffle读取文件大小 |
 | spark.sql.adaptive.minNumPostShufflePartitions | - | -1 | 10, 200 | Shuffle最小分区数量 |
 
 ## Yarn
 
 ## Hive
+
+| 名称 | 版本 | 默认值 | 推荐值 | 含义 |
+| :--- | :--- | :--- | :--- | :--- |
+| hive.exec.dynamic.partition | - | false | true | 允许动态分区 |
+| hive.exec.dynamic.partition.mode | - | strict | nonstrict | 动态分区模式 |
+| hive.exec.max.dynamic.partitions | - | 1000 | 100-1000 | 允许创建最大分区数 |
+
+## MapReduce
+
+## HDFS
+
+## JVM
 
 ## Reference
 
