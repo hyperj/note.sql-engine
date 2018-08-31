@@ -1,5 +1,7 @@
 # 附录A（Appendix A）
 
+- Application 应用, Job 作业, Stage 依赖单元, Partition 计算单元, Task 执行单元, Block 存储单元
+
 ## Configuration
 
 ### Application Properties
@@ -29,9 +31,21 @@
 
 ### Spark SQL
 
+| 名称 | 版本 | 默认值 | 推荐值 | 含义 |
+| :--- | :--- | :--- | :--- | :--- |
+| spark.sql.shuffle.partitions | - | 200 | 20, 400 | Shuffle分区数量（Join、Aggr） |
+| spark.sql.autoBroadcastJoinThreshold | - | 10L * 1024 * 1024 | (32, 64) * 1024 * 1024 | 自动优化为BroadcastJoin阈值 |
+| spark.sql.adaptive.enabled | - | false | true | 自适应查询执行（Broadcast、Partition（Skew）） |
+| spark.sql.adaptive.shuffle.targetPostShuffleInputSize | - | 64 * 1024 * 1024 | (32, 128) * 1024 * 1024 | Shuffle读取文件大小 |
+| spark.sql.adaptive.minNumPostShufflePartitions | - | -1 | 10, 200 | Shuffle最小分区数量 |
+
+## Yarn
+
+## Hive
+
 ## Reference
 
 * [Spark Configuration](https://spark.apache.org/docs/latest/configuration.html)
-
+* [SQLConf.scala](https://github.com/apache/spark/blob/master/sql/catalyst/src/main/scala/org/apache/spark/sql/internal/SQLConf.scala)
 
 

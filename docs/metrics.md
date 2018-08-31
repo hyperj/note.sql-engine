@@ -33,3 +33,5 @@
 ## Reference
 
 * [Monitoring and Instrumentation](https://spark.apache.org/docs/latest/monitoring.html)
+* [Dr. Elephant](https://github.com/linkedin/dr-elephant)
+* [Sparklint](https://github.com/groupon/sparklint)
