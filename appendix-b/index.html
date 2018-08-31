@@ -679,6 +679,26 @@
     Functions
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from_json" title="from_json" class="md-nav__link">
+    from_json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_json" title="to_json" class="md-nav__link">
+    to_json
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -777,6 +797,26 @@
     Functions
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from_json" title="from_json" class="md-nav__link">
+    from_json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to_json" title="to_json" class="md-nav__link">
+    to_json
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -806,11 +846,50 @@
                 <h1 id="bappendix-b">附录B（Appendix B）<a class="headerlink" href="#bappendix-b" title="Permanent link">&para;</a></h1>
 <h2 id="manual">Manual<a class="headerlink" href="#manual" title="Permanent link">&para;</a></h2>
 <h3 id="ddl-data-definition-language">DDL (Data Definition Language)<a class="headerlink" href="#ddl-data-definition-language" title="Permanent link">&para;</a></h3>
+<p>CREATE/DROP/ALTER/TRUNCATE/SHOW/DESCRIBE</p>
+<p>DATABASE/TABLE/COLUMN/VIEW/<del>INDEX/MACRO</del>/FUNCTION</p>
 <h3 id="dml-data-manipulation-language">DML (Data Manipulation Language)<a class="headerlink" href="#dml-data-manipulation-language" title="Permanent link">&para;</a></h3>
+<p>LOAD/INSERT/<del>UPDATE/DELETE/MERGE</del></p>
+<p><del>IMPORT/EXPORT</del></p>
+<p>EXPLAIN</p>
 <h3 id="dql-data-query-language">DQL (Data Query Language)<a class="headerlink" href="#dql-data-query-language" title="Permanent link">&para;</a></h3>
+<p>SELECT</p>
 <h3 id="dcl-data-control-language">DCL (Data Control Language)<a class="headerlink" href="#dcl-data-control-language" title="Permanent link">&para;</a></h3>
+<p><del>GRANT/REVOKE</del></p>
+<p><del>ROLE/PRIVILEGE</del></p>
 <h3 id="dtl-data-transaction-language">DTL (Data Transaction Language)<a class="headerlink" href="#dtl-data-transaction-language" title="Permanent link">&para;</a></h3>
+<p><del>LOCKS/TRANSACTIONS/COMPACTIONS</del></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<h3 id="from_json">from_json<a class="headerlink" href="#from_json" title="Permanent link">&para;</a></h3>
+<p>from_json(jsonStr, schema[, options]) - Returns a struct value with the given jsonStr and schema.</p>
+<p><strong>Examples:</strong></p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;{&quot;a&quot;:1, &quot;b&quot;:0.8}&#39;</span><span class="p">,</span> <span class="s1">&#39;a INT, b DOUBLE&#39;</span><span class="p">);</span>
+ <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="err">}</span>
+<span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;{&quot;time&quot;:&quot;26/08/2015&quot;}&#39;</span><span class="p">,</span> <span class="s1">&#39;time Timestamp&#39;</span><span class="p">,</span> <span class="k">map</span><span class="p">(</span><span class="s1">&#39;timestampFormat&#39;</span><span class="p">,</span> <span class="s1">&#39;dd/MM/yyyy&#39;</span><span class="p">));</span>
+ <span class="err">{</span><span class="ss">&quot;time&quot;</span><span class="p">:</span><span class="ss">&quot;2015-08-26 00:00:00.0&quot;</span><span class="err">}</span>
+</pre></div>
+
+<p>Since: 2.2.0</p>
+<h3 id="to_json">to_json<a class="headerlink" href="#to_json" title="Permanent link">&para;</a></h3>
+<p>to_json(expr[, options]) - Returns a json string with a given struct value</p>
+<p><strong>Examples:</strong></p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+ <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="ss">&quot;b&quot;</span><span class="p">:</span><span class="mi">2</span><span class="err">}</span>
+<span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">to_timestamp</span><span class="p">(</span><span class="s1">&#39;2015-08-26&#39;</span><span class="p">,</span> <span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="p">)),</span> <span class="k">map</span><span class="p">(</span><span class="s1">&#39;timestampFormat&#39;</span><span class="p">,</span> <span class="s1">&#39;dd/MM/yyyy&#39;</span><span class="p">));</span>
+ <span class="err">{</span><span class="ss">&quot;time&quot;</span><span class="p">:</span><span class="ss">&quot;26/08/2015&quot;</span><span class="err">}</span>
+<span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="nb">array</span><span class="p">(</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+ <span class="p">[</span><span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="ss">&quot;b&quot;</span><span class="p">:</span><span class="mi">2</span><span class="err">}</span><span class="p">]</span>
+<span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)));</span>
+ <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="err">{</span><span class="ss">&quot;b&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}}</span>
+<span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)));</span>
+ <span class="err">{</span><span class="ss">&quot;[1]&quot;</span><span class="p">:</span><span class="err">{</span><span class="ss">&quot;b&quot;</span><span class="p">:</span><span class="mi">2</span><span class="err">}}</span>
+<span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>
+ <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span>
+<span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="nb">array</span><span class="p">((</span><span class="k">map</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))));</span>
+ <span class="p">[</span><span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">]</span>
+</pre></div>
+
+<p>Since: 2.2.0</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://spark.apache.org/docs/latest/api/sql/index.html">Spark SQL, Built-in Functions</a></li>
