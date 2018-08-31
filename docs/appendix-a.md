@@ -1,6 +1,8 @@
 # 附录A（Appendix A）
 
-- Application 应用, Job 作业, Stage 依赖单元, Partition 计算单元, Task 执行单元, Block 存储单元
+Application -1:n-> Job -1:n-> Stage 依赖单元
+
+Task 执行单元 -1:1-> Partition 计算单元 -1:n-> Block 存储单元
 
 ## Configuration
 
