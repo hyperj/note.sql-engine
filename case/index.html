@@ -737,6 +737,18 @@
                 
                 <h1 id="sql-case">SQL Case<a class="headerlink" href="#sql-case" title="Permanent link">&para;</a></h1>
 <h2 id="case-1">Case 1<a class="headerlink" href="#case-1" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">girls</span> <span class="k">where</span> <span class="n">age</span> <span class="k">between</span> <span class="mi">18</span> <span class="k">and</span> <span class="mi">24</span> <span class="k">and</span> <span class="n">boyfriend</span><span class="o">=</span><span class="s1">&#39;no&#39;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span>
+       <span class="n">phone</span><span class="p">,</span>
+       <span class="n">avatar</span> 
+  <span class="k">FROM</span> <span class="n">users</span> 
+ <span class="k">WHERE</span> <span class="n">gender</span> <span class="o">=</span> <span class="mi">2</span> 
+   <span class="k">AND</span> <span class="n">age</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">)</span> 
+   <span class="k">AND</span> <span class="n">sense</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+
 <h2 id="case-2">Case 2<a class="headerlink" href="#case-2" title="Permanent link">&para;</a></h2>
 <h2 id="case-3">Case 3<a class="headerlink" href="#case-3" title="Permanent link">&para;</a></h2>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>

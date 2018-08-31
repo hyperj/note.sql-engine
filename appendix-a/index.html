@@ -698,6 +698,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#yarn" title="Yarn" class="md-nav__link">
+    Yarn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive" title="Hive" class="md-nav__link">
+    Hive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" title="Reference" class="md-nav__link">
     Reference
   </a>
@@ -836,6 +850,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#yarn" title="Yarn" class="md-nav__link">
+    Yarn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hive" title="Hive" class="md-nav__link">
+    Hive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" title="Reference" class="md-nav__link">
     Reference
   </a>
@@ -860,6 +888,7 @@
                 
                 
                 <h1 id="aappendix-a">附录A（Appendix A）<a class="headerlink" href="#aappendix-a" title="Permanent link">&para;</a></h1>
+<p>Stage 依赖单元, Partition 计算单元, Task 执行单元, Block 存储单元</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <h3 id="application-properties">Application Properties<a class="headerlink" href="#application-properties" title="Permanent link">&para;</a></h3>
 <table>
@@ -912,9 +941,60 @@
 <h3 id="scheduling">Scheduling<a class="headerlink" href="#scheduling" title="Permanent link">&para;</a></h3>
 <h3 id="dynamic-allocation">Dynamic Allocation<a class="headerlink" href="#dynamic-allocation" title="Permanent link">&para;</a></h3>
 <h3 id="spark-sql">Spark SQL<a class="headerlink" href="#spark-sql" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">版本</th>
+<th align="left">默认值</th>
+<th align="left">推荐值</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">spark.sql.shuffle.partitions</td>
+<td align="left">-</td>
+<td align="left">200</td>
+<td align="left">20, 400</td>
+<td align="left">Shuffle分区数量（Join、Aggr）</td>
+</tr>
+<tr>
+<td align="left">spark.sql.autoBroadcastJoinThreshold</td>
+<td align="left">-</td>
+<td align="left">10L * 1024 * 1024</td>
+<td align="left">(32, 64) * 1024 * 1024</td>
+<td align="left">自动优化为BroadcastJoin阈值</td>
+</tr>
+<tr>
+<td align="left">spark.sql.adaptive.enabled</td>
+<td align="left">-</td>
+<td align="left">false</td>
+<td align="left">true</td>
+<td align="left">自适应查询执行（Broadcast、Partition（Skew））</td>
+</tr>
+<tr>
+<td align="left">spark.sql.adaptive.shuffle.targetPostShuffleInputSize</td>
+<td align="left">-</td>
+<td align="left">64 * 1024 * 1024</td>
+<td align="left">(32, 128) * 1024 * 1024</td>
+<td align="left">Shuffle读取文件大小</td>
+</tr>
+<tr>
+<td align="left">spark.sql.adaptive.minNumPostShufflePartitions</td>
+<td align="left">-</td>
+<td align="left">-1</td>
+<td align="left">10, 200</td>
+<td align="left">Shuffle最小分区数量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="yarn">Yarn<a class="headerlink" href="#yarn" title="Permanent link">&para;</a></h2>
+<h2 id="hive">Hive<a class="headerlink" href="#hive" title="Permanent link">&para;</a></h2>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://spark.apache.org/docs/latest/configuration.html">Spark Configuration</a></li>
+<li>[]</li>
 </ul>
                 
                   
