@@ -8,6 +8,14 @@
 * Serialization
 * Replication
 
+## Operation
+
+LRU(Least Recently Used)
+
+* Cache(persist(StorageLevel.MEMORY_AND_DISK))
+* Persist(persist/unPersist/destroy)
+* Checkpoint
+
 ## Store
 
 * Disk
