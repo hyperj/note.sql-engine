@@ -19,14 +19,14 @@ LRU(Least Recently Used)
 ## 存储（Store）
 
 * Disk
-* Memory
+* Memory(OnHeap/OffHeap)
 
 ## 统一内存管理（Unified Memory Management）
 
 * Execution
 * Storage
 
-## 回话（Session）
+## 会话（Session）
 
 * Metastore
 * Local Session
