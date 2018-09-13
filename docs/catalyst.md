@@ -28,6 +28,10 @@
 
 ## Execution
 
+### Aggregation
+
+### Join
+
 ## Tungsten
 
 * Memory Management and Binary Processing
