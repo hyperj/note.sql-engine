@@ -35,8 +35,8 @@
 ## Tungsten
 
 * Memory Management and Binary Processing
-* Cache-aware computation
-* Code generation
+* Cache-aware computation(CPU L1/L2/L3: Cache Hit, Cache Locality)
+* Code generation(Janino、WholeStageCodegen)
 * No virtual function dispatches
 * Intermediate data in memory vs CPU registers
 * Loop unrolling and SIMD
