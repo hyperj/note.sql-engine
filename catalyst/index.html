@@ -553,6 +553,26 @@
     Execution
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregation" title="Aggregation" class="md-nav__link">
+    Aggregation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" title="Join" class="md-nav__link">
+    Join
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -849,6 +869,26 @@
     Execution
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregation" title="Aggregation" class="md-nav__link">
+    Aggregation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" title="Join" class="md-nav__link">
+    Join
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -985,11 +1025,13 @@
 <li>CBO（Cost-Based Optimizer）：Shuffle、Join</li>
 </ul>
 <h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
+<h3 id="aggregation">Aggregation<a class="headerlink" href="#aggregation" title="Permanent link">&para;</a></h3>
+<h3 id="join">Join<a class="headerlink" href="#join" title="Permanent link">&para;</a></h3>
 <h2 id="tungsten">Tungsten<a class="headerlink" href="#tungsten" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Memory Management and Binary Processing</li>
-<li>Cache-aware computation</li>
-<li>Code generation</li>
+<li>Cache-aware computation(CPU L1/L2/L3: Cache Hit, Cache Locality)</li>
+<li>Code generation(Janino、WholeStageCodegen)</li>
 <li>No virtual function dispatches</li>
 <li>Intermediate data in memory vs CPU registers</li>
 <li>Loop unrolling and SIMD</li>
