@@ -8,6 +8,9 @@
 
 ## Rule
 
+* Rule
+* RuleExecutor
+
 ## Parser
 
 * SQL、Dataset、DataFrame -> ANTLR(词法、语法<Visitor>) -> 未绑定的逻辑计划（Relation、Function、Attribute）
@@ -19,8 +22,7 @@
 ## Optimizer
 
 * RBO（Rule-Based Optimizer）
-* 合并、裁剪、谓词下推
-
+* 组合、裁剪、下推、消除、简化、优化
 ## Planner
 
 * 策略（Strategy）
@@ -75,6 +77,13 @@
 * Federation
 
 ## Session
+
+## Catalog
+
+* Configuration
+* View
+* Function<Registry、Loader>
+* External Catalog<Memory、Hive>
 
 ## Cache
 
