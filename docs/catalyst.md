@@ -18,11 +18,13 @@
 ## Analyzer
 
 * Catalog、Metastore、Rule -> 数据绑定 -> 绑定的逻辑计划
+* Batch(Substitution、Resolution、Nondeterministic、UDF、FixNullability、Cleanup)
 
 ## Optimizer
 
 * RBO（Rule-Based Optimizer）
 * 组合、裁剪、下推、消除、简化、优化
+
 ## Planner
 
 * 策略（Strategy）
