@@ -1,7 +1,3 @@
-site_name: SQL Engine
-theme:
-  name: 'material'
-
 # Project information
 site_name: SQL Engine
 site_description: SQL Engine
@@ -11,14 +7,14 @@ site_url: https://hyperj.github.io/docs.sql-engine/
 # Repository
 repo_name: hyperj/docs.sql-engine
 repo_url: https://github.com/hyperj/docs.sql-engine
-edit_uri: ""
+edit_uri: blob/master/docs/
 
 # Copyright
-copyright: 'Copyright &copy; 2009 - 2018 HyperJ'
+copyright: Copyright &copy; 2009 - 2018 HyperJ
 
 # Configuration
 theme:
-  name: 'material'
+  name: material
 
   # 404 page
   static_templates:
@@ -52,16 +48,18 @@ extra:
       link: http://blog.hyperj.net
     - type: linkedin
       link: https://www.linkedin.com/in/hyperj
+  pagetime: 'on'
 
 # Extensions
 markdown_extensions:
-  - markdown.extensions.admonition
-  - markdown.extensions.codehilite:
+  - admonition
+  - codehilite:
       guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
+      linenums: true
+  - def_list
+  - footnotes
+  - meta
+  - toc:
       permalink: true
   - pymdownx.arithmatex
   - pymdownx.betterem:
