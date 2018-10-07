@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="SQL Engine">
+        <meta name="description" content="基于 Spark SQL 2.x 进行整理，参考主流分布式 SQL 计算引擎相关的开源项目">
       
       
         <link rel="canonical" href="https://hyperj.github.io/docs.sql-engine/appendix-b/">
@@ -175,7 +175,7 @@
   
 
 
-  <a href="https://github.com/hyperj/docs.sql-engine" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/hyperj/docs.sql-engine/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -229,8 +229,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../network/" title="Base" class="md-tabs__link">
-          Base
+        <a href="../network/" title="Basis" class="md-tabs__link">
+          Basis
         </a>
       
     </li>
@@ -304,7 +304,7 @@
   
 
 
-  <a href="https://github.com/hyperj/docs.sql-engine" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/hyperj/docs.sql-engine/" title="Go to repository" class="md-source" data-md-source="github">
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -379,11 +379,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Base
+      Basis
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        Base
+        Basis
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -842,6 +842,8 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/hyperj/docs.sql-engine/blob/master/docs/appendix-b.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
                 
                 <h1 id="bappendix-b">附录B（Appendix B）<a class="headerlink" href="#bappendix-b" title="Permanent link">&para;</a></h1>
 <h2 id="manual">Manual<a class="headerlink" href="#manual" title="Permanent link">&para;</a></h2>
@@ -863,17 +865,34 @@
 <h3 id="from_json">from_json<a class="headerlink" href="#from_json" title="Permanent link">&para;</a></h3>
 <p>from_json(jsonStr, schema[, options]) - Returns a struct value with the given jsonStr and schema.</p>
 <p><strong>Examples:</strong></p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;{&quot;a&quot;:1, &quot;b&quot;:0.8}&#39;</span><span class="p">,</span> <span class="s1">&#39;a INT, b DOUBLE&#39;</span><span class="p">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;{&quot;a&quot;:1, &quot;b&quot;:0.8}&#39;</span><span class="p">,</span> <span class="s1">&#39;a INT, b DOUBLE&#39;</span><span class="p">);</span>
  <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;b&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="err">}</span>
 <span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">from_json</span><span class="p">(</span><span class="s1">&#39;{&quot;time&quot;:&quot;26/08/2015&quot;}&#39;</span><span class="p">,</span> <span class="s1">&#39;time Timestamp&#39;</span><span class="p">,</span> <span class="k">map</span><span class="p">(</span><span class="s1">&#39;timestampFormat&#39;</span><span class="p">,</span> <span class="s1">&#39;dd/MM/yyyy&#39;</span><span class="p">));</span>
  <span class="err">{</span><span class="ss">&quot;time&quot;</span><span class="p">:</span><span class="ss">&quot;2015-08-26 00:00:00.0&quot;</span><span class="err">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>Since: 2.2.0</p>
 <h3 id="to_json">to_json<a class="headerlink" href="#to_json" title="Permanent link">&para;</a></h3>
 <p>to_json(expr[, options]) - Returns a json string with a given struct value</p>
 <p><strong>Examples:</strong></p>
-<div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
  <span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="ss">&quot;b&quot;</span><span class="p">:</span><span class="mi">2</span><span class="err">}</span>
 <span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="n">named_struct</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">to_timestamp</span><span class="p">(</span><span class="s1">&#39;2015-08-26&#39;</span><span class="p">,</span> <span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="p">)),</span> <span class="k">map</span><span class="p">(</span><span class="s1">&#39;timestampFormat&#39;</span><span class="p">,</span> <span class="s1">&#39;dd/MM/yyyy&#39;</span><span class="p">));</span>
  <span class="err">{</span><span class="ss">&quot;time&quot;</span><span class="p">:</span><span class="ss">&quot;26/08/2015&quot;</span><span class="err">}</span>
@@ -888,6 +907,7 @@
 <span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">to_json</span><span class="p">(</span><span class="nb">array</span><span class="p">((</span><span class="k">map</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))));</span>
  <span class="p">[</span><span class="err">{</span><span class="ss">&quot;a&quot;</span><span class="p">:</span><span class="mi">1</span><span class="err">}</span><span class="p">]</span>
 </pre></div>
+</td></tr></table>
 
 <p>Since: 2.2.0</p>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
