@@ -2,26 +2,26 @@
 site_name: SQL Engine
 site_description: 基于 Spark SQL 2.x 进行整理，参考主流分布式 SQL 计算引擎相关的开源项目
 site_author: HyperJ
-site_url: https://hyperj.github.io/docs.sql-engine/
+site_url: https://hyperj.net/docs.sql-engine
 
 # Repository
 repo_name: hyperj/docs.sql-engine
 repo_url: https://github.com/hyperj/docs.sql-engine
-edit_uri: blob/master/docs/
+edit_uri: blob/master/docs
 
 # Copyright
-copyright: Copyright &copy; 2009 - 2018 HyperJ
+copyright: 'Copyright &copy; 2013 - 2018 HyperJ'
 
 # Configuration
 theme:
-  name: material
+  name: 'material'
 
   # 404 page
   static_templates:
     - 404.html
 
   # Don't include MkDocs' JavaScript
-  include_search_page: false
+  include_search_page: true
   search_index_only: true
 
   # Default values, taken from mkdocs_theme.yml
@@ -29,37 +29,33 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: indigo
-    accent: indigo
+    primary: white
+    accent: amber
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/favicon.ico
-  logo: assets/images/favicon.ico
+  favicon: assets/images/hyperj-black.png
+  logo: assets/images/hyperj-black.png
 
 # Customization
 extra:
   social:
-    - type: github-alt
-      link: https://gist.github.com/hyperj/
+    - type: h-square
+      link: https://hyperj.net
     - type: github
       link: https://github.com/hyperj
-    - type: h-square
-      link: http://blog.hyperj.net
     - type: linkedin
       link: https://www.linkedin.com/in/hyperj
-  pagetime: 'on'
 
 # Extensions
 markdown_extensions:
-  - admonition
-  - codehilite:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
       guess_lang: false
-      linenums: true
-  - def_list
-  - footnotes
-  - meta
-  - toc:
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
       permalink: true
   - pymdownx.arithmatex
   - pymdownx.betterem:
