@@ -6,6 +6,13 @@
 
 * [Spark 性能调优总结](https://github.com/endymecy/spark-config-and-tuning)
 
+## Optimizer
+
+- RBO(Rule)
+- CBO(Cost)
+- HBO(History)
+- ABO(Adaptive)
+
 ## Data Governance（Table & Column -> Lineage & Impact -> Data Graph）
 
 * [Atlas](https://atlas.apache.org/)
