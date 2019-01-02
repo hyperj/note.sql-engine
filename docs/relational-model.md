@@ -15,5 +15,5 @@
 
 ## Reference
 
-* [关系模型](https://zh.wikipedia.org/wiki/关系模型)
+- [关系模型](https://zh.wikipedia.org/wiki/关系模型)
 

@@ -59,7 +59,7 @@ Task 执行单元 -1:n-> Partition 计算单元 -1:n-> Block 存储单元
 
 ## Reference
 
-* [Spark Configuration](https://spark.apache.org/docs/latest/configuration.html)
-* [SQLConf.scala](https://github.com/apache/spark/blob/master/sql/catalyst/src/main/scala/org/apache/spark/sql/internal/SQLConf.scala)
+- [Spark Configuration](https://spark.apache.org/docs/latest/configuration.html)
+- [SQLConf.scala](https://github.com/apache/spark/blob/master/sql/catalyst/src/main/scala/org/apache/spark/sql/internal/SQLConf.scala)
 
 

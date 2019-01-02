@@ -25,5 +25,5 @@ Master, Worker, Client, Driver, Executor
 
 ## Reference
 
-* [体系化认识RPC](http://www.infoq.com/cn/articles/get-to-know-rpc)
-* [深入解析Spark中的RPC](https://zhuanlan.zhihu.com/p/28893155)
+- [体系化认识RPC](http://www.infoq.com/cn/articles/get-to-know-rpc)
+- [深入解析Spark中的RPC](https://zhuanlan.zhihu.com/p/28893155)

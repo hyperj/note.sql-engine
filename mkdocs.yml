@@ -10,7 +10,7 @@ repo_url: https://github.com/hyperj/note.sql-engine
 edit_uri: blob/master/docs
 
 # Copyright
-copyright: 'Copyright &copy; 2013 - 2019 HyperJ'
+copyright: Copyright &copy; 2013 - 2019 HyperJ <script type="text/javascript">document.write(unescape("%3Cdiv id='cnzz_stat_icon_1275779234'%3E%3C/div%3E%3Cscript src='https://s5.cnzz.com/z_stat.php%3Fid%3D1275779234%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
 
 # Configuration
 theme:
@@ -77,26 +77,26 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home: index.md
-  - Retreat: retreat.md
-  - Relational Model: relational-model.md
-  - Relational Algebra: relational-algebra.md
-  - Basis:
-    - Network: network.md
-    - Scheduler: scheduler.md
-    - Storage: storage.md
-    - Compute: compute.md
-    - Metrics: metrics.md
+  - 首页: index.md
+  - 引言: retreat.md
+  - 关系模型: relational-model.md
+  - 关系代数: relational-algebra.md
+  - 基础:
+    - 网络: network.md
+    - 调度: schedule.md
+    - 存储: storage.md
+    - 计算: compute.md
+    - 度量: metrics.md
   - SQL:
     - Catalyst: catalyst.md
-    - Case: case.md
-    - Tuning: tuning.md
-  - Practices:
-    - Work & Practices: work-and-practices.md
-    - Projects & Articles: projects-and-articles.md
-  - Appendix:
-    - Appendix A: appendix-a.md
-    - Appendix B: appendix-b.md
+    - 案例: case.md
+    - 调优: tuning.md
+  - 实践:
+    - 工作与实践: work-and-practices.md
+    - 项目与文章: projects-and-articles.md
+  - 附录:
+    - 附录 A: appendix-a.md
+    - 附录 B: appendix-b.md
 
 # Analytics
 

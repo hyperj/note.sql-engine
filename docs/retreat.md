@@ -11,6 +11,6 @@
 
 ## Reference：
 
-* [数据库内核月报](http://mysql.taobao.org/monthly/)
-* [Computer Science Learning Notes](https://github.com/CyC2018/CS-Notes)
-* [OI Wiki](https://oi-wiki.org/)
+- [数据库内核月报](http://mysql.taobao.org/monthly/)
+- [Computer Science Learning Notes](https://github.com/CyC2018/CS-Notes)
+- [OI Wiki](https://oi-wiki.org/)

@@ -1,4 +1,4 @@
-# 调度（Scheduler）
+# 调度（Schedule）
 
 ## 资源（Resource）
 
@@ -51,6 +51,6 @@
 
 ## Reference：
 
-* [Scheduler Architectures](http://www.firmament.io/blog/scheduler-architectures.html)
-* [Firmament: Fast, Centralized Cluster Scheduling at Scale](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/gog)
+- [Scheduler Architectures](http://www.firmament.io/blog/scheduler-architectures.html)
+- [Firmament: Fast, Centralized Cluster Scheduling at Scale](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/gog)
 

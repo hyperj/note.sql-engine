@@ -1,6 +1,6 @@
 # 附录B（Appendix B）
 
-## Data Types
+## 数据类型（Data Types）
 
 Spark SQL and DataFrames support the following data types:
 
@@ -276,7 +276,7 @@ Since: 2.2.0
 
 ## Reference
 
-* [Spark SQL, Built-in Functions](https://spark.apache.org/docs/latest/api/sql/index.html)
+- [Spark SQL, Built-in Functions](https://spark.apache.org/docs/latest/api/sql/index.html)
 
 
 
