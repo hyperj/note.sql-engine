@@ -4,24 +4,21 @@
 
 ## InternalRow
 
-- UnsafeRow
-- JoinedRow
+- UnsafeRow(Tungsten)
+- JoinedRow(Join)
 - BaseGenericInternalRow
   - GenericInternalRow
-  - SpecificInternalRow
-  - MutableUnsafeRow
+  - SpecificInternalRow(modify)
+  - MutableUnsafeRow(update)
 
 ## TreeNode
 
-## QueryPlan
-
-- LogicalPlan
-
-  UnaryNode、BinaryNode、LeafNode、Other
-
-- SparkPlan
-
-  UnaryExecNode、BinaryExecNode、LeafExecNode、Other
+- Expression
+- QueryPlan
+  - LogicalPlan
+    - UnaryNode、BinaryNode、LeafNode、Other
+  - SparkPlan
+    - UnaryExecNode、BinaryExecNode、LeafExecNode、Other
 
 ## Rule
 
@@ -30,15 +27,17 @@
 
 ## Parser
 
-- SQL、Dataset、DataFrame -> ANTLR(词法、语法<Visitor>) -> 未绑定的逻辑计划（Relation、Function、Attribute）
+- ANTLR(词法<Lexer>、语法<Parser>)：Adaptive LL(*)、递归下降，监听器（Listener）、Visitor（访问者）
+- SQL、Dataset、DataFrame -> AstBuilder -> Unresolved LogicalPlan（Relation、Function、Attribute）
 
 ## Analyzer
 
-- Catalog、Metastore、Rule -> 数据绑定 -> 绑定的逻辑计划
+- Catalog、Metastore、Rule -> 数据绑定 -> Analyzed LogicalPlan
 - Batch(Substitution、Resolution、Nondeterministic、UDF、FixNullability、Cleanup)
 
 ## Optimizer
 
+- Optimized LogicalPlan
 - RBO（Rule-Based Optimizer）
 - 组合、裁剪、下推、消除、简化、优化
 
@@ -49,8 +48,11 @@
 
 ## Execution
 
+- QueryExecution
+
 ### Aggregation
 
+- Partail、PartailMerge、Final、Complete
 - window
 
 ### Join

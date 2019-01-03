@@ -1,8 +1,8 @@
-# 附录A（Appendix A）
+# 附录 A（Appendix A）
 
-Application -1:n-> Session(Context) -1:n-> Job -1:n-> Stage 依赖单元
+Application -1:n-> Session(Context) -1:n-> Job -1:n-> Stage
 
-Task 执行单元 -1:n-> Partition 计算单元 -1:n-> Block 存储单元
+Task -1:n-> Partition -1:n-> Block
 
 ## Configuration
 

@@ -1,4 +1,4 @@
-# 附录B（Appendix B）
+# 附录 B（Appendix B）
 
 ## 数据类型（Data Types）
 
