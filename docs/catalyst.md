@@ -110,6 +110,7 @@ PushProjectionThroughUnion、EliminateDistinct、EliminateSubqueryAliases、Elim
 
 ## Aggregation
 
+- Aggregation Buffer(Schema、Attributes)
 - Partial、PartialMerge、Final、Complete
 
 ### Window
@@ -188,8 +189,8 @@ in-memory columnar format
 
 ## Hint
 
-- Join
-- Shuffle
+- Join、Shuffle
+- BROADCASTJOIN、MAPJOIN、STREAMTABLE、INDEX、COALESCE、REPARTITION
 
 ## Statistics
 
@@ -198,6 +199,7 @@ in-memory columnar format
 
 ## Adapter
 
+- Metadata
 - Metrics
 
 ## Data Source
@@ -212,7 +214,8 @@ in-memory columnar format
 
 ## Session
 
-Application -1:n-> Session(Context) -1:n-> Job
+- Application -1:n-> Session(Context) -1:n-> Job
+- Share & Cache Data
 
 ## Catalog
 
