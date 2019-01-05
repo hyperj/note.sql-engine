@@ -7,7 +7,9 @@
 a container of serde expressions in Dataset
 
 - Serialize、Deserialize
-- ExpressionEncoder
+- ExpressionEncoder(only)
+
+_RowEncoder(mapping & convert external rows)_
 
 ## InternalRow
 
@@ -23,6 +25,7 @@ a container of serde expressions in Dataset
 - Expression
 - QueryPlan
   - LogicalPlan
+    - resolved、canonicalized
     - UnaryNode、BinaryNode、LeafNode、Other
   - SparkPlan
     - UnaryExecNode、BinaryExecNode、LeafExecNode、Other
@@ -31,9 +34,10 @@ a container of serde expressions in Dataset
 
 - Rule
 - RuleExecutor
-  - Once
-  - FixedPoint
-  - Batch
+  - Seq[Batch]
+  - Strategy
+    - Once
+    - FixedPoint
 
 ## Parser
 
@@ -42,25 +46,67 @@ a container of serde expressions in Dataset
 
 ## Analyzer
 
+![LogicalPlan Analyzer](assets/images/logicalplan-analyzer.png)
+
 - Strategy、Rule-Based
 - Catalog、Metastore、Rule -> semantically validates and transforms(resolving, removing, modifying) -> Analyzed LogicalPlan
-- Batch(Substitution、Resolution、Nondeterministic、UDF、FixNullability、Cleanup)
+
+| Batch | Strategy | Rules |
+| :--- | :--- | :--- |
+| Hints | FixedPoint | ResolveBroadcastHints、ResolveCoalesceHints、RemoveAllHints |
+| Simple Sanity Check | Once | LookupFunctions |
+| Substitution | FixedPoint | CTESubstitution、WindowsSubstitution、EliminateUnions、SubstituteUnresolvedOrdinals |
+| Resolution | FixedPoint | ResolveTableValuedFunctions、ResolveRelations、ResolveReferences、ResolveCreateNamedStruct、ResolveDeserializer、ResolveNewInstance、ResolveUpCast、ResolveGroupingAnalytics、ResolvePivot、ResolveOrdinalInOrderByAndGroupBy、ResolveMissingReferences、ExtractGenerator、ResolveGenerate、ResolveFunctions、ResolveAliases、ResolveSubquery、ResolveWindowOrder、ResolveWindowFrame、ResolveNaturalAndUsingJoin、ExtractWindowExpressions、GlobalAggregates、ResolveAggregateFunctions、TimeWindowing、ResolveInlineTables、TypeCoercion.typeCoercionRules、extendedResolutionRules |
+| Post-Hoc Resolution | Once | postHocResolutionRules |
+| View | Once | AliasViewChild |
+| Nondeterministic | Once | PullOutNondeterministic |
+| UDF | Once | HandleNullInputsForUDF |
+| FixNullability | Once | FixNullability |
+| ResolveTimeZone | Once | ResolveTimeZone |
+| Cleanup | FixedPoint | CleanupAliases |
 
 ## Optimizer
 
 - Analyzed LogicalPlan -> RBO(Rule-Based Optimizer) -> Optimized LogicalPlan
-- Rules：组合（Combine）、替换（Replace）、裁剪（Prune）、下推（Push）、消除（Eliminate）、简化（Simplify）、优化（Optimize）、改写（Rewrite）...
 
-## Planner
+| Batch | Strategy | Rules |
+| :--- | :--- | :--- |
+| Eliminate Distinct | FixedPoint | EliminateDistinct |
+| Finish Analysis | Once | EliminateSubqueryAliases、EliminateView、ReplaceExpressions、ComputeCurrentTime、GetCurrentDatabase、RewriteDistinctAggregates、ReplaceDeduplicateWithAggregate |
+| Union | Once | CombineUnions |
+| LocalRelation early | FixedPoint | ConvertToLocalRelation、PropagateEmptyRelation |
+| Pullup Correlated Expressions | Once | PullupCorrelatedPredicates |
+| Subquery | Once | OptimizeSubqueries |
+| Replace Operators | FixedPoint | RewriteExceptAll、RewriteIntersectAll、ReplaceIntersectWithSemiJoin、ReplaceExceptWithFilter、ReplaceExceptWithAntiJoin、ReplaceDistinctWithAggregate |
+| Aggregate | FixedPoint | RemoveLiteralFromGroupExpressions、RemoveRepetitionFromGroupExpressions |
+| Join Reorder | Once | CostBasedJoinReorder |
+| Remove Redundant Sorts | Once | RemoveRedundantSorts |
+| Decimal Optimizations | FixedPoint | DecimalAggregates |
+| Object Expressions Optimization | FixedPoint | EliminateMapObjects、CombineTypedFilters |
+| LocalRelation | FixedPoint | ConvertToLocalRelation、PropagateEmptyRelation |
+| Extract PythonUDF From JoinCondition | Once | PullOutPythonUDFInJoinCondition |
+| Check Cartesian Products | Once | CheckCartesianProducts |
+| RewriteSubquery | Once | RewritePredicateSubquery、ColumnPruning、CollapseProject、RemoveRedundantProject |
+| UpdateAttributeReferences | Once | UpdateNullabilityInAttributeReferences |
 
-- Strategy、Rule
-- CBO（Cost-Based Optimizer）：Shuffle、Join
+- extendedOperatorOptimizationRules
 
-## Execution
+PushProjectionThroughUnion、ReorderJoin、EliminateOuterJoin、PushPredicateThroughJoin、PushDownPredicate、LimitPushDown、ColumnPruning、CollapseRepartition、CollapseProject、CollapseWindow、CombineFilters、CombineLimits、CombineUnions、NullPropagation、ConstantPropagation、FoldablePropagation、OptimizeIn、ConstantFolding、ReorderAssociativeOperator、LikeSimplification、BooleanSimplification、SimplifyConditionals、RemoveDispensableExpressions、SimplifyBinaryComparison、PruneFilters、EliminateSorts、SimplifyCasts、SimplifyCaseConversionExpressions、RewriteCorrelatedScalarSubquery、EliminateSerialization、RemoveRedundantAliases、RemoveRedundantProject、SimplifyExtractValueOps、CombineConcats
+
+- Non-Excludable
+
+PushProjectionThroughUnion、EliminateDistinct、EliminateSubqueryAliases、EliminateView、ReplaceExpressions、ComputeCurrentTime、GetCurrentDatabase、RewriteDistinctAggregates、ReplaceDeduplicateWithAggregate、ReplaceIntersectWithSemiJoin、ReplaceExceptWithFilter、ReplaceExceptWithAntiJoin、RewriteExceptAll、RewriteIntersectAll、ReplaceDistinctWithAggregate、PullupCorrelatedPredicates、RewriteCorrelatedScalarSubquery、RewritePredicateSubquery、PullOutPythonUDFInJoinCondition
+
+## Planner & Execution
 
 ![SparkPlan Execution](assets/images/sparkplan-execute.png)
 
-- QueryExecution
+- CBO（Cost-Based Optimizer）：Shuffle、Join
+- SparkPlan、SparkPlaner、QueryExecution
+- Distribution、Partitioning、SortOrder
+- SparkPlanInfo(metadata、metrics)
+- SparkStrategy(Aggregation、BasicOperators、FlatMapGroupsWithStateStrategy、InMemoryScans、JoinSelection、SpecialLimits、StatefulAggregationStrategy、StreamingDeduplicationStrategy、StreamingRelationStrategy)
+- Rule(CollapseCodegenStages、PlanSubqueries、ReuseSubquery、ReuseExchange、EnsureRequirements)
 
 ## Aggregation
 
