@@ -556,15 +556,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#planner" title="Planner" class="md-nav__link">
-    Planner
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#execution" title="Execution" class="md-nav__link">
-    Execution
+  <a href="#planner-execution" title="Planner &amp; Execution" class="md-nav__link">
+    Planner &amp; Execution
   </a>
   
 </li>
@@ -893,15 +886,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#planner" title="Planner" class="md-nav__link">
-    Planner
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#execution" title="Execution" class="md-nav__link">
-    Execution
+  <a href="#planner-execution" title="Planner &amp; Execution" class="md-nav__link">
+    Planner &amp; Execution
   </a>
   
 </li>
@@ -1049,8 +1035,9 @@
 <p>a container of serde expressions in Dataset</p>
 <ul>
 <li>Serialize、Deserialize</li>
-<li>ExpressionEncoder</li>
+<li>ExpressionEncoder(only)</li>
 </ul>
+<p><em>RowEncoder(mapping &amp; convert external rows)</em></p>
 <h2 id="internalrow">InternalRow<a class="headerlink" href="#internalrow" title="Permanent link">&para;</a></h2>
 <ul>
 <li>UnsafeRow(Tungsten)</li>
@@ -1065,6 +1052,7 @@
 <li>Expression</li>
 <li>QueryPlan</li>
 <li>LogicalPlan<ul>
+<li>resolved、canonicalized</li>
 <li>UnaryNode、BinaryNode、LeafNode、Other</li>
 </ul>
 </li>
@@ -1077,9 +1065,12 @@
 <ul>
 <li>Rule</li>
 <li>RuleExecutor</li>
+<li>Seq[Batch]</li>
+<li>Strategy<ul>
 <li>Once</li>
 <li>FixedPoint</li>
-<li>Batch</li>
+</ul>
+</li>
 </ul>
 <h2 id="parser">Parser<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1087,28 +1078,198 @@
 <li>SQL、Dataset、DataFrame -&gt; AstBuilder -&gt; Unresolved LogicalPlan（Relation、Function、Attribute）</li>
 </ul>
 <h2 id="analyzer">Analyzer<a class="headerlink" href="#analyzer" title="Permanent link">&para;</a></h2>
+<p><img alt="LogicalPlan Analyzer" src="../assets/images/logicalplan-analyzer.png" /></p>
 <ul>
 <li>Strategy、Rule-Based</li>
 <li>Catalog、Metastore、Rule -&gt; semantically validates and transforms(resolving, removing, modifying) -&gt; Analyzed LogicalPlan</li>
-<li>Batch(Substitution、Resolution、Nondeterministic、UDF、FixNullability、Cleanup)</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th align="left">Batch</th>
+<th align="left">Strategy</th>
+<th align="left">Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Hints</td>
+<td align="left">FixedPoint</td>
+<td align="left">ResolveBroadcastHints、ResolveCoalesceHints、RemoveAllHints</td>
+</tr>
+<tr>
+<td align="left">Simple Sanity Check</td>
+<td align="left">Once</td>
+<td align="left">LookupFunctions</td>
+</tr>
+<tr>
+<td align="left">Substitution</td>
+<td align="left">FixedPoint</td>
+<td align="left">CTESubstitution、WindowsSubstitution、EliminateUnions、SubstituteUnresolvedOrdinals</td>
+</tr>
+<tr>
+<td align="left">Resolution</td>
+<td align="left">FixedPoint</td>
+<td align="left">ResolveTableValuedFunctions、ResolveRelations、ResolveReferences、ResolveCreateNamedStruct、ResolveDeserializer、ResolveNewInstance、ResolveUpCast、ResolveGroupingAnalytics、ResolvePivot、ResolveOrdinalInOrderByAndGroupBy、ResolveMissingReferences、ExtractGenerator、ResolveGenerate、ResolveFunctions、ResolveAliases、ResolveSubquery、ResolveWindowOrder、ResolveWindowFrame、ResolveNaturalAndUsingJoin、ExtractWindowExpressions、GlobalAggregates、ResolveAggregateFunctions、TimeWindowing、ResolveInlineTables、TypeCoercion.typeCoercionRules、extendedResolutionRules</td>
+</tr>
+<tr>
+<td align="left">Post-Hoc Resolution</td>
+<td align="left">Once</td>
+<td align="left">postHocResolutionRules</td>
+</tr>
+<tr>
+<td align="left">View</td>
+<td align="left">Once</td>
+<td align="left">AliasViewChild</td>
+</tr>
+<tr>
+<td align="left">Nondeterministic</td>
+<td align="left">Once</td>
+<td align="left">PullOutNondeterministic</td>
+</tr>
+<tr>
+<td align="left">UDF</td>
+<td align="left">Once</td>
+<td align="left">HandleNullInputsForUDF</td>
+</tr>
+<tr>
+<td align="left">FixNullability</td>
+<td align="left">Once</td>
+<td align="left">FixNullability</td>
+</tr>
+<tr>
+<td align="left">ResolveTimeZone</td>
+<td align="left">Once</td>
+<td align="left">ResolveTimeZone</td>
+</tr>
+<tr>
+<td align="left">Cleanup</td>
+<td align="left">FixedPoint</td>
+<td align="left">CleanupAliases</td>
+</tr>
+</tbody>
+</table>
 <h2 id="optimizer">Optimizer<a class="headerlink" href="#optimizer" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Analyzed LogicalPlan -&gt; RBO(Rule-Based Optimizer) -&gt; Optimized LogicalPlan</li>
-<li>Rules：组合（Combine）、替换（Replace）、裁剪（Prune）、下推（Push）、消除（Eliminate）、简化（Simplify）、优化（Optimize）、改写（Rewrite）...</li>
 </ul>
-<h2 id="planner">Planner<a class="headerlink" href="#planner" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Batch</th>
+<th align="left">Strategy</th>
+<th align="left">Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Eliminate Distinct</td>
+<td align="left">FixedPoint</td>
+<td align="left">EliminateDistinct</td>
+</tr>
+<tr>
+<td align="left">Finish Analysis</td>
+<td align="left">Once</td>
+<td align="left">EliminateSubqueryAliases、EliminateView、ReplaceExpressions、ComputeCurrentTime、GetCurrentDatabase、RewriteDistinctAggregates、ReplaceDeduplicateWithAggregate</td>
+</tr>
+<tr>
+<td align="left">Union</td>
+<td align="left">Once</td>
+<td align="left">CombineUnions</td>
+</tr>
+<tr>
+<td align="left">LocalRelation early</td>
+<td align="left">FixedPoint</td>
+<td align="left">ConvertToLocalRelation、PropagateEmptyRelation</td>
+</tr>
+<tr>
+<td align="left">Pullup Correlated Expressions</td>
+<td align="left">Once</td>
+<td align="left">PullupCorrelatedPredicates</td>
+</tr>
+<tr>
+<td align="left">Subquery</td>
+<td align="left">Once</td>
+<td align="left">OptimizeSubqueries</td>
+</tr>
+<tr>
+<td align="left">Replace Operators</td>
+<td align="left">FixedPoint</td>
+<td align="left">RewriteExceptAll、RewriteIntersectAll、ReplaceIntersectWithSemiJoin、ReplaceExceptWithFilter、ReplaceExceptWithAntiJoin、ReplaceDistinctWithAggregate</td>
+</tr>
+<tr>
+<td align="left">Aggregate</td>
+<td align="left">FixedPoint</td>
+<td align="left">RemoveLiteralFromGroupExpressions、RemoveRepetitionFromGroupExpressions</td>
+</tr>
+<tr>
+<td align="left">Join Reorder</td>
+<td align="left">Once</td>
+<td align="left">CostBasedJoinReorder</td>
+</tr>
+<tr>
+<td align="left">Remove Redundant Sorts</td>
+<td align="left">Once</td>
+<td align="left">RemoveRedundantSorts</td>
+</tr>
+<tr>
+<td align="left">Decimal Optimizations</td>
+<td align="left">FixedPoint</td>
+<td align="left">DecimalAggregates</td>
+</tr>
+<tr>
+<td align="left">Object Expressions Optimization</td>
+<td align="left">FixedPoint</td>
+<td align="left">EliminateMapObjects、CombineTypedFilters</td>
+</tr>
+<tr>
+<td align="left">LocalRelation</td>
+<td align="left">FixedPoint</td>
+<td align="left">ConvertToLocalRelation、PropagateEmptyRelation</td>
+</tr>
+<tr>
+<td align="left">Extract PythonUDF From JoinCondition</td>
+<td align="left">Once</td>
+<td align="left">PullOutPythonUDFInJoinCondition</td>
+</tr>
+<tr>
+<td align="left">Check Cartesian Products</td>
+<td align="left">Once</td>
+<td align="left">CheckCartesianProducts</td>
+</tr>
+<tr>
+<td align="left">RewriteSubquery</td>
+<td align="left">Once</td>
+<td align="left">RewritePredicateSubquery、ColumnPruning、CollapseProject、RemoveRedundantProject</td>
+</tr>
+<tr>
+<td align="left">UpdateAttributeReferences</td>
+<td align="left">Once</td>
+<td align="left">UpdateNullabilityInAttributeReferences</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Strategy、Rule</li>
-<li>CBO（Cost-Based Optimizer）：Shuffle、Join</li>
+<li>extendedOperatorOptimizationRules</li>
 </ul>
-<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
+<p>PushProjectionThroughUnion、ReorderJoin、EliminateOuterJoin、PushPredicateThroughJoin、PushDownPredicate、LimitPushDown、ColumnPruning、CollapseRepartition、CollapseProject、CollapseWindow、CombineFilters、CombineLimits、CombineUnions、NullPropagation、ConstantPropagation、FoldablePropagation、OptimizeIn、ConstantFolding、ReorderAssociativeOperator、LikeSimplification、BooleanSimplification、SimplifyConditionals、RemoveDispensableExpressions、SimplifyBinaryComparison、PruneFilters、EliminateSorts、SimplifyCasts、SimplifyCaseConversionExpressions、RewriteCorrelatedScalarSubquery、EliminateSerialization、RemoveRedundantAliases、RemoveRedundantProject、SimplifyExtractValueOps、CombineConcats</p>
+<ul>
+<li>Non-Excludable</li>
+</ul>
+<p>PushProjectionThroughUnion、EliminateDistinct、EliminateSubqueryAliases、EliminateView、ReplaceExpressions、ComputeCurrentTime、GetCurrentDatabase、RewriteDistinctAggregates、ReplaceDeduplicateWithAggregate、ReplaceIntersectWithSemiJoin、ReplaceExceptWithFilter、ReplaceExceptWithAntiJoin、RewriteExceptAll、RewriteIntersectAll、ReplaceDistinctWithAggregate、PullupCorrelatedPredicates、RewriteCorrelatedScalarSubquery、RewritePredicateSubquery、PullOutPythonUDFInJoinCondition</p>
+<h2 id="planner-execution">Planner &amp; Execution<a class="headerlink" href="#planner-execution" title="Permanent link">&para;</a></h2>
 <p><img alt="SparkPlan Execution" src="../assets/images/sparkplan-execute.png" /></p>
 <ul>
-<li>QueryExecution</li>
+<li>CBO（Cost-Based Optimizer）：Shuffle、Join</li>
+<li>SparkPlan、SparkPlaner、QueryExecution</li>
+<li>Distribution、Partitioning、SortOrder</li>
+<li>SparkPlanInfo(metadata、metrics)</li>
+<li>SparkStrategy(Aggregation、BasicOperators、FlatMapGroupsWithStateStrategy、InMemoryScans、JoinSelection、SpecialLimits、StatefulAggregationStrategy、StreamingDeduplicationStrategy、StreamingRelationStrategy)</li>
+<li>Rule(CollapseCodegenStages、PlanSubqueries、ReuseSubquery、ReuseExchange、EnsureRequirements)</li>
 </ul>
 <h2 id="aggregation">Aggregation<a class="headerlink" href="#aggregation" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Aggregation Buffer(Schema、Attributes)</li>
 <li>Partial、PartialMerge、Final、Complete</li>
 </ul>
 <h3 id="window">Window<a class="headerlink" href="#window" title="Permanent link">&para;</a></h3>
@@ -1181,8 +1342,8 @@ joinCriteria
 </ul>
 <h2 id="hint">Hint<a class="headerlink" href="#hint" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Join</li>
-<li>Shuffle</li>
+<li>Join、Shuffle</li>
+<li>BROADCASTJOIN、MAPJOIN、STREAMTABLE、INDEX、COALESCE、REPARTITION</li>
 </ul>
 <h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1191,6 +1352,7 @@ joinCriteria
 </ul>
 <h2 id="adapter">Adapter<a class="headerlink" href="#adapter" title="Permanent link">&para;</a></h2>
 <ul>
+<li>Metadata</li>
 <li>Metrics</li>
 </ul>
 <h2 id="data-source">Data Source<a class="headerlink" href="#data-source" title="Permanent link">&para;</a></h2>
@@ -1204,7 +1366,10 @@ joinCriteria
 <li>CarbonData</li>
 </ul>
 <h2 id="session">Session<a class="headerlink" href="#session" title="Permanent link">&para;</a></h2>
-<p>Application -1:n-&gt; Session(Context) -1:n-&gt; Job</p>
+<ul>
+<li>Application -1:n-&gt; Session(Context) -1:n-&gt; Job</li>
+<li>Share &amp; Cache Data</li>
+</ul>
 <h2 id="catalog">Catalog<a class="headerlink" href="#catalog" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Configuration</li>
