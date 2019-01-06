@@ -78,9 +78,10 @@ markdown_extensions:
 # Page tree
 nav:
   - 首页: index.md
-  - 引言: retreat.md
-  - 关系模型: relational-model.md
-  - 关系代数: relational-algebra.md
+  - 引言:
+    - 关系模型: relational-model.md
+    - 关系代数: relational-algebra.md
+    - 知识领域: knowledge.md
   - 基础:
     - 网络: network.md
     - 调度: schedule.md
