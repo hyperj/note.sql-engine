@@ -6,17 +6,17 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/retreat/</loc>
-     <lastmod>2019-01-06</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://hyperj.net/note.sql-engine/relational-model/</loc>
      <lastmod>2019-01-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://hyperj.net/note.sql-engine/relational-algebra/</loc>
+     <lastmod>2019-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/knowledge/</loc>
      <lastmod>2019-01-06</lastmod>
      <changefreq>daily</changefreq>
     </url>

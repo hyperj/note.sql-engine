@@ -13,7 +13,7 @@
         <meta name="description" content="基于 Spark SQL 2.x 进行整理，参考主流分布式 SQL 计算引擎相关的开源项目">
       
       
-        <link rel="canonical" href="https://hyperj.net/note.sql-engine/retreat/">
+        <link rel="canonical" href="https://hyperj.net/note.sql-engine/knowledge/">
       
       
         <meta name="author" content="HyperJ">
@@ -42,7 +42,7 @@
     
     
       
-        <title>引言 - SQL Engine</title>
+        <title>知识领域 - SQL Engine</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#retreat" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 SQL Engine
               </span>
               <span class="md-header-nav__topic">
-                引言
+                知识领域
               </span>
             
           
@@ -202,14 +202,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." title="首页" class="md-tabs__link md-tabs__link--active">
+      <a href=".." title="首页" class="md-tabs__link">
         首页
       </a>
     
@@ -217,10 +219,17 @@
 
       
         
+  
+  
+    <li class="md-tabs__item">
       
-        
+        <a href="../relational-model/" title="引言" class="md-tabs__link md-tabs__link--active">
+          引言
+        </a>
       
-        
+    </li>
+  
+
       
         
   
@@ -338,6 +347,51 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      引言
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        引言
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../relational-model/" title="关系模型" class="md-nav__link">
+      关系模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../relational-algebra/" title="关系代数" class="md-nav__link">
+      关系代数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -346,11 +400,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        引言
+        知识领域
       </label>
     
-    <a href="./" title="引言" class="md-nav__link md-nav__link--active">
-      引言
+    <a href="./" title="知识领域" class="md-nav__link md-nav__link--active">
+      知识领域
     </a>
     
       
@@ -364,8 +418,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basis" title="Basis（基础）" class="md-nav__link">
-    Basis（基础）
+  <a href="#knowledge" title="Knowledge" class="md-nav__link">
+    Knowledge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#book" title="Book" class="md-nav__link">
+    Book
   </a>
   
 </li>
@@ -387,28 +448,9 @@
     
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../relational-model/" title="关系模型" class="md-nav__link">
-      关系模型
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../relational-algebra/" title="关系代数" class="md-nav__link">
-      关系代数
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -419,13 +461,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-3">
       基础
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-3">
         基础
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -503,13 +545,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-4">
       SQL
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-4">
         SQL
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -563,13 +605,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-5">
       实践
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-5">
         实践
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -611,13 +653,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-8">
+    <label class="md-nav__link" for="nav-6">
       附录
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
+      <label class="md-nav__title" for="nav-6">
         附录
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -673,8 +715,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basis" title="Basis（基础）" class="md-nav__link">
-    Basis（基础）
+  <a href="#knowledge" title="Knowledge" class="md-nav__link">
+    Knowledge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#book" title="Book" class="md-nav__link">
+    Book
   </a>
   
 </li>
@@ -702,24 +751,27 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/hyperj/note.sql-engine/blob/master/docs/retreat.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/hyperj/note.sql-engine/blob/master/docs/knowledge.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="retreat">引言（Retreat）<a class="headerlink" href="#retreat" title="Permanent link">&para;</a></h1>
-<h2 id="basis">Basis（基础）<a class="headerlink" href="#basis" title="Permanent link">&para;</a></h2>
+                <h1 id="_1">知识领域<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="knowledge">Knowledge<a class="headerlink" href="#knowledge" title="Permanent link">&para;</a></h2>
 <ul>
-<li>操作系统：进程、内存、文件、IO、调度</li>
-<li>网络：TCP、RPC、Netty</li>
-<li>数据库：关系模型、事务</li>
-<li>数据结构与算法</li>
+<li>操作系统：进程、调度、内存、文件、IO</li>
+<li>网络：TCP、RPC、Akka、Netty</li>
+<li>数据库：关系模型、SQL、事务、索引</li>
+<li>数据结构与算法：Raft、Hash、Probability、Heuristic</li>
 <li>Java/Scala：JVM、JMM、GC、JIT</li>
 <li>分布式：存储、计算、调度、管理、日志</li>
 </ul>
+<h2 id="book">Book<a class="headerlink" href="#book" title="Permanent link">&para;</a></h2>
 <h2 id="reference">Reference：<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://mysql.taobao.org/monthly/">数据库内核月报</a></li>
 <li><a href="https://github.com/CyC2018/CS-Notes">Computer Science Learning Notes</a></li>
 <li><a href="https://oi-wiki.org/">OI Wiki</a></li>
+<li><a href="http://blog.sciencenet.cn/blog-468147-356755.html">分布式系统 读后感</a></li>
+<li><a href="https://www.slideshare.net/knuthocean/distributed-system-engineeringpractice">分布式系统工程实践</a></li>
 </ul>
                 
                   
@@ -741,7 +793,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="首页" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../relational-algebra/" title="关系代数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -750,19 +802,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                首页
+                关系代数
               </span>
             </div>
           </a>
         
         
-          <a href="../relational-model/" title="关系模型" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../network/" title="网络" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                关系模型
+                网络
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
