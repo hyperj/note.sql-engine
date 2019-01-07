@@ -5,7 +5,7 @@
 ![Spark SQL](docs/assets/images/sparksql.png)
 
 * Spark Core（RDD APIs）、Data Source Connectors
-* Catalyst Optimization、 Tungsten Execution
+* Catalyst Optimization、Tungsten Execution
 * SparkSession、Dataset/DataFrame APIs、SQL
 * Structured Streaming、MLlib、GraphFrame、TensorFrames
 
