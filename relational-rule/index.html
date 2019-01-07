@@ -13,7 +13,7 @@
         <meta name="description" content="基于 Spark SQL 2.x 进行整理，参考主流分布式 SQL 计算引擎相关的开源项目">
       
       
-        <link rel="canonical" href="https://hyperj.net/note.sql-engine/compute/">
+        <link rel="canonical" href="https://hyperj.net/note.sql-engine/relational-rule/">
       
       
         <meta name="author" content="HyperJ">
@@ -42,7 +42,7 @@
     
     
       
-        <title>计算 - SQL Engine</title>
+        <title>关系定律 - SQL Engine</title>
       
     
     
@@ -104,7 +104,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#compute" tabindex="1" class="md-skip">
+      <a href="#relational-rule" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -130,7 +130,7 @@
                 SQL Engine
               </span>
               <span class="md-header-nav__topic">
-                计算
+                关系定律
               </span>
             
           
@@ -223,7 +223,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../relational-model/" title="引言" class="md-tabs__link">
+        <a href="../relational-model/" title="引言" class="md-tabs__link md-tabs__link--active">
           引言
         </a>
       
@@ -236,7 +236,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../network/" title="基础" class="md-tabs__link md-tabs__link--active">
+        <a href="../network/" title="基础" class="md-tabs__link">
           基础
         </a>
       
@@ -344,10 +344,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       引言
@@ -387,11 +389,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../relational-rule/" title="关系定律" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        关系定律
+      </label>
+    
+    <a href="./" title="关系定律" class="md-nav__link md-nav__link--active">
       关系定律
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rule" title="Rule" class="md-nav__link">
+    Rule
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate" title="Evaluate" class="md-nav__link">
+    Evaluate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -416,12 +470,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       基础
@@ -473,125 +525,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        计算
-      </label>
-    
-    <a href="./" title="计算" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../compute/" title="计算" class="md-nav__link">
       计算
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pattern" title="Pattern" class="md-nav__link">
-    Pattern
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#constraint" title="约束条件（Constraint）" class="md-nav__link">
-    约束条件（Constraint）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rdd" title="RDD" class="md-nav__link">
-    RDD
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#characteristics" title="Characteristics" class="md-nav__link">
-    Characteristics
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operations" title="Operations" class="md-nav__link">
-    Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependencies" title="Dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stage" title="Stage" class="md-nav__link">
-    Stage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dag" title="DAG" class="md-nav__link">
-    DAG
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shuffle" title="Shuffle" class="md-nav__link">
-    Shuffle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tungsten" title="Tungsten" class="md-nav__link">
-    Tungsten
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -789,77 +727,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pattern" title="Pattern" class="md-nav__link">
-    Pattern
+  <a href="#rule" title="Rule" class="md-nav__link">
+    Rule
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#constraint" title="约束条件（Constraint）" class="md-nav__link">
-    约束条件（Constraint）
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rdd" title="RDD" class="md-nav__link">
-    RDD
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#characteristics" title="Characteristics" class="md-nav__link">
-    Characteristics
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#operations" title="Operations" class="md-nav__link">
-    Operations
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dependencies" title="Dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stage" title="Stage" class="md-nav__link">
-    Stage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dag" title="DAG" class="md-nav__link">
-    DAG
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shuffle" title="Shuffle" class="md-nav__link">
-    Shuffle
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tungsten" title="Tungsten" class="md-nav__link">
-    Tungsten
+  <a href="#evaluate" title="Evaluate" class="md-nav__link">
+    Evaluate
   </a>
   
 </li>
@@ -887,64 +763,33 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/hyperj/note.sql-engine/blob/master/docs/compute.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/hyperj/note.sql-engine/blob/master/docs/relational-rule.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="compute">计算（Compute）<a class="headerlink" href="#compute" title="Permanent link">&para;</a></h1>
-<h2 id="pattern">Pattern<a class="headerlink" href="#pattern" title="Permanent link">&para;</a></h2>
+                <h1 id="relational-rule">关系定律（Relational Rule）<a class="headerlink" href="#relational-rule" title="Permanent link">&para;</a></h1>
+<h2 id="rule">Rule<a class="headerlink" href="#rule" title="Permanent link">&para;</a></h2>
 <ul>
-<li>MR、MRM（Map、Reduce、Merge）</li>
-<li>可枚举性（Ad hoc、OLAP）、可加性（批量、增量<State>）</li>
+<li>结合律与交换律：顺序、结果</li>
+<li>选择（Selection &lt; σ &gt;）：分解、下推</li>
+<li>投影（Projection &lt; π &gt; ）：消除、下推</li>
+<li>连接（Join &lt; ⋈ &gt;）：积、下推</li>
+<li>重复：消除、下推</li>
+<li>分组、聚集：消除</li>
+<li>结合、分配</li>
 </ul>
-<h2 id="constraint">约束条件（Constraint）<a class="headerlink" href="#constraint" title="Permanent link">&para;</a></h2>
-<h2 id="rdd">RDD<a class="headerlink" href="#rdd" title="Permanent link">&para;</a></h2>
-<h3 id="characteristics">Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h3>
+<h2 id="evaluate">Evaluate<a class="headerlink" href="#evaluate" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Partitions</li>
-<li>PreferredLocations</li>
-<li>Dependencies</li>
-<li>Iterator</li>
-<li>Partitioner</li>
-</ul>
-<h3 id="operations">Operations<a class="headerlink" href="#operations" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Creation</li>
-<li>Transformation</li>
-<li>Storage</li>
-<li>Action</li>
-</ul>
-<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Narrow Dependencies</li>
-<li>Shuffle/Wide Dependencies</li>
-</ul>
-<h2 id="stage">Stage<a class="headerlink" href="#stage" title="Permanent link">&para;</a></h2>
-<ul>
-<li>ResultStage</li>
-<li>ShuffleMapStage</li>
-</ul>
-<h2 id="dag">DAG<a class="headerlink" href="#dag" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Lineage</li>
-</ul>
-<h2 id="shuffle">Shuffle<a class="headerlink" href="#shuffle" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Read/Write</li>
-<li>Server/Client</li>
-<li>Pull/Push</li>
-</ul>
-<h2 id="tungsten">Tungsten<a class="headerlink" href="#tungsten" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Memory Management and Binary Processing</li>
-<li>Cache-aware computation</li>
-<li>Code generation</li>
-<li>No virtual function dispatches</li>
-<li>Intermediate data in memory vs CPU registers</li>
-<li>Loop unrolling and SIMD</li>
+<li>中间关系</li>
+<li>选择运算</li>
+<li>投影运算</li>
+<li>连接运算：多连接、多关系</li>
+<li>交、并、差</li>
+<li>消除重复</li>
+<li>分组、聚集</li>
 </ul>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf">Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/关系模型">关系模型</a></li>
 </ul>
                 
                   
@@ -966,7 +811,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../storage/" title="存储" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../relational-algebra/" title="关系代数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -975,19 +820,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                存储
+                关系代数
               </span>
             </div>
           </a>
         
         
-          <a href="../metrics/" title="度量" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../knowledge/" title="知识领域" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                度量
+                知识领域
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
