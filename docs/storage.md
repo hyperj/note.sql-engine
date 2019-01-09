@@ -4,7 +4,7 @@
 
 * Disk
 * Memory
-* OffHeap
+* OffHeap(Unsafe、Zero-copy)
 * Serialization
 * Replication
 

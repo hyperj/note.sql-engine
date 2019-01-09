@@ -236,7 +236,7 @@ in-memory columnar format
 ## ShuffleService
 
 - Standalone Mode
-- Executor process
+- Executor Process
 
 ## Reference
 
