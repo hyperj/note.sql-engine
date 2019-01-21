@@ -1,6 +1,6 @@
 # Introduction
 
-基于`Spark SQL 2.x`进行整理，参考主流分布式`SQL`计算引擎相关的开源项目，以下为主要参考的项目：
+当前版本基于`Spark SQL 2.x`进行整理，参考了主流分布式`SQL`计算引擎相关的开源项目。
 
 ![Spark SQL](assets/images/sparksql.png)
 

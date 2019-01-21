@@ -26,8 +26,8 @@
 ## 调度算法（Algorithm）
 
 * First Fitness
-* 贪心算法
-* 动态规划
+* 背包问题：贪心算法
+* 规划问题：整数规划
 * Graph Base（Firmament）
 * 强化学习
 

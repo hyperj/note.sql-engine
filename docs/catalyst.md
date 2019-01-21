@@ -1,4 +1,4 @@
-# SQL Catalyst
+# Catalyst
 
 ![Catalyst](assets/images/catalyst.png)
 

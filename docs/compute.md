@@ -1,9 +1,9 @@
 # 计算（Compute）
 
-## Pattern
+## 计算模式（Pattern）
 
-* MR、MRM（Map、Reduce、Merge）
-* 可枚举性（Ad hoc、OLAP）、可加性（批量、增量<State>）
+- MR、MRM（Map、Reduce、Merge）
+- 可枚举性（Ad hoc、OLAP）、可加性（批量、增量<State>）
 
 ## 约束条件（Constraint）
 
@@ -11,47 +11,49 @@
 
 ### Characteristics
 
-* Partitions
-* PreferredLocations
-* Dependencies
-* Iterator
-* Partitioner
+- 分布（Partitions）
+- 本地化（PreferredLocations）
+- 依赖（Dependencies）
+- 迭代（Iterator）
+- 分区（Partitioner）
 
 ### Operations
 
-* Creation
-* Transformation
-* Storage
-* Action
+- Creation
+- Transformation
+- Storage
+- Action
 
 ### Dependencies
 
-* Narrow Dependencies
-* Shuffle/Wide Dependencies
+- Narrow Dependencies
+- Shuffle/Wide Dependencies
 
 ## Stage
 
-* ResultStage
-* ShuffleMapStage
+- ResultStage
+- ShuffleMapStage
 
 ## DAG
 
-* Lineage
+- Lineage
+- Fault Tolerance
+- Data Dependency
 
 ## Shuffle
 
-* Read/Write
-* Server/Client
-* Pull/Push
+- Read/Write
+- Server/Client
+- Pull/Push
 
 ## Tungsten
 
-* Memory Management and Binary Processing
-* Cache-aware computation
-* Code generation
-* No virtual function dispatches
-* Intermediate data in memory vs CPU registers
-* Loop unrolling and SIMD
+- Memory Management and Binary Processing
+- Cache-aware computation
+- Code generation
+- No virtual function dispatches
+- Intermediate data in memory vs CPU registers
+- Loop unrolling and SIMD
 
 ## Reference
 
