@@ -38,12 +38,6 @@ LRU(Least Recently Used)
 * Server/Client
 * Pull/Push
 
-## 存储格式（Storage Format）
-
-* ORC
-* Parquet
-* CarbonData
-
 ## Reference
 
 - [Apache Spark 内存管理详解](https://www.ibm.com/developerworks/cn/analytics/library/ba-cn-apache-spark-memory-management/)

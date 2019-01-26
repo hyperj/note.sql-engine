@@ -34,8 +34,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/hyperj-black.png
-  logo: assets/images/hyperj-black.png
+  favicon: /assets/images/hyperj.ico
+  logo: /assets/images/hyperj.png
 
 # Customization
 extra:
@@ -79,26 +79,42 @@ markdown_extensions:
 nav:
   - 首页: index.md
   - 引言:
-    - 关系模型: relational-model.md
-    - 关系代数: relational-algebra.md
-    - 关系定律: relational-rule.md
-    - 知识领域: knowledge.md
+    - 关系模型: retreat/relational-model.md
+    - 关系代数: retreat/relational-algebra.md
+    - 关系定律: retreat/relational-rule.md
+    - 知识领域: retreat/knowledge.md
   - 基础:
-    - 网络: network.md
-    - 调度: schedule.md
-    - 存储: storage.md
-    - 计算: compute.md
-    - 度量: metrics.md
-  - SQL:
-    - Catalyst: catalyst.md
-    - 案例: case.md
-    - 调优: tuning.md
+    - 调度: basis/schedule.md
+    - 网络: basis/network.md
+    - 存储: basis/storage.md
+    - 计算: basis/compute.md
+    - 度量: basis/metrics.md
+  - Spark:
+    - 调度: spark/schedule.md
+    - 网络: spark/network.md
+    - 存储: spark/storage.md
+    - 计算: spark/compute.md
+    - 度量: spark/metrics.md
+    - Catalyst: spark/catalyst.md
+  - Presto:
+    - TODO: presto/todo.md
+  - Hive:
+    - TODO: hive/todo.md
+  - TODO:
+    - SnappyData: snappydata/todo.md
+    - ClickHouse: clickhouse/todo.md
+    - Kylin: kylin/todo.md
+    - Druid: druid/todo.md
+    - Doris: doris/todo.md
+    - Impala: impala/todo.md
+    - TiDB: tidb/todo.md
   - 实践:
-    - 工作与实践: work-and-practices.md
-    - 项目与文章: projects-and-articles.md
+    - 调优与案例: practice/tuning-and-case.md
+    - 工作与实践: practice/work-and-practices.md
+    - 项目与文章: practice/projects-and-articles.md
   - 附录:
-    - 附录 A: appendix-a.md
-    - 附录 B: appendix-b.md
+    - 附录 A: appendix/appendix-a.md
+    - 附录 B: appendix/appendix-b.md
 
 # Analytics
 

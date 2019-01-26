@@ -1,6 +1,6 @@
 # Catalyst
 
-![Catalyst](assets/images/catalyst.png)
+![Catalyst](../assets/images/spark/catalyst.png)
 
 ## Encoder
 
@@ -46,7 +46,7 @@ _RowEncoder(mapping & convert external rows)_
 
 ## Analyzer
 
-![LogicalPlan Analyzer](assets/images/logicalplan-analyzer.png)
+![LogicalPlan Analyzer](../assets/images/spark/logicalplan-analyzer.png)
 
 - Strategy、Rule-Based
 - Catalog、Metastore、Rule -> semantically validates and transforms(resolving, removing, modifying) -> Analyzed LogicalPlan
@@ -99,7 +99,7 @@ PushProjectionThroughUnion、EliminateDistinct、EliminateSubqueryAliases、Elim
 
 ## Planner & Execution
 
-![SparkPlan Execution](assets/images/sparkplan-execute.png)
+![SparkPlan Execution](../assets/images/spark/sparkplan-execute.png)
 
 - CBO（Cost-Based Optimizer）：Shuffle、Join
 - SparkPlan、SparkPlaner、QueryExecution
