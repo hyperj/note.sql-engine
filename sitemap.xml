@@ -2,87 +2,152 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://hyperj.net/note.sql-engine/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/relational-model/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/retreat/relational-model/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/relational-algebra/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/retreat/relational-algebra/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/relational-rule/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/retreat/relational-rule/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/knowledge/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/retreat/knowledge/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/network/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/basis/schedule/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/schedule/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/basis/network/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/storage/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/basis/storage/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/compute/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/basis/compute/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/metrics/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/basis/metrics/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/catalyst/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/spark/schedule/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/case/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/spark/network/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/tuning/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/spark/storage/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/work-and-practices/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/spark/compute/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/projects-and-articles/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/spark/metrics/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/appendix-a/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/spark/catalyst/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/appendix-b/</loc>
-     <lastmod>2019-01-21</lastmod>
+     <loc>https://hyperj.net/note.sql-engine/presto/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/hive/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/snappydata/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/clickhouse/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/kylin/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/druid/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/doris/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/impala/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/tidb/todo/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/practice/tuning-and-case/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/practice/work-and-practices/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/practice/projects-and-articles/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/appendix/appendix-a/</loc>
+     <lastmod>2019-01-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://hyperj.net/note.sql-engine/appendix/appendix-b/</loc>
+     <lastmod>2019-01-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

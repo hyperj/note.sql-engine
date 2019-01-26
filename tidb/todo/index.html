@@ -13,6 +13,8 @@
         <meta name="description" content="当前版本基于`Spark SQL 2.x`进行整理，参考了主流分布式`SQL`计算引擎相关的开源项目">
       
       
+        <link rel="canonical" href="https://hyperj.net/note.sql-engine/tidb/todo/">
+      
       
         <meta name="author" content="HyperJ">
       
@@ -40,13 +42,13 @@
     
     
       
-        <title>SQL Engine</title>
+        <title>TiDB - SQL Engine</title>
       
     
     
-      <link rel="stylesheet" href="/note.sql-engine/assets/stylesheets/application.451f80e5.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="/note.sql-engine/assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -55,7 +57,7 @@
       
     
     
-      <script src="/note.sql-engine/assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -64,7 +66,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/note.sql-engine/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
   </head>
@@ -102,6 +104,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#todo" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -124,7 +130,7 @@
                 SQL Engine
               </span>
               <span class="md-header-nav__topic">
-                
+                TiDB
               </span>
             
           
@@ -196,14 +202,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="/note.sql-engine/." title="首页" class="md-tabs__link md-tabs__link--active">
+      <a href="../.." title="首页" class="md-tabs__link">
         首页
       </a>
     
@@ -215,7 +223,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/retreat/relational-model/" title="引言" class="md-tabs__link">
+        <a href="../../retreat/relational-model/" title="引言" class="md-tabs__link">
           引言
         </a>
       
@@ -228,7 +236,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/basis/schedule/" title="基础" class="md-tabs__link">
+        <a href="../../basis/schedule/" title="基础" class="md-tabs__link">
           基础
         </a>
       
@@ -241,7 +249,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/spark/schedule/" title="Spark" class="md-tabs__link">
+        <a href="../../spark/schedule/" title="Spark" class="md-tabs__link">
           Spark
         </a>
       
@@ -254,7 +262,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/presto/todo/" title="Presto" class="md-tabs__link">
+        <a href="../../presto/todo/" title="Presto" class="md-tabs__link">
           Presto
         </a>
       
@@ -267,7 +275,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/hive/todo/" title="Hive" class="md-tabs__link">
+        <a href="../../hive/todo/" title="Hive" class="md-tabs__link">
           Hive
         </a>
       
@@ -280,7 +288,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/snappydata/todo/" title="TODO" class="md-tabs__link">
+        <a href="../../snappydata/todo/" title="TODO" class="md-tabs__link md-tabs__link--active">
           TODO
         </a>
       
@@ -293,7 +301,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/practice/tuning-and-case/" title="实践" class="md-tabs__link">
+        <a href="../../practice/tuning-and-case/" title="实践" class="md-tabs__link">
           实践
         </a>
       
@@ -306,7 +314,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/note.sql-engine/appendix/appendix-a/" title="附录" class="md-tabs__link">
+        <a href="../../appendix/appendix-a/" title="附录" class="md-tabs__link">
           附录
         </a>
       
@@ -365,7 +373,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/." title="首页" class="md-nav__link">
+    <a href="../.." title="首页" class="md-nav__link">
       首页
     </a>
   </li>
@@ -396,7 +404,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/retreat/relational-model/" title="关系模型" class="md-nav__link">
+    <a href="../../retreat/relational-model/" title="关系模型" class="md-nav__link">
       关系模型
     </a>
   </li>
@@ -408,7 +416,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/retreat/relational-algebra/" title="关系代数" class="md-nav__link">
+    <a href="../../retreat/relational-algebra/" title="关系代数" class="md-nav__link">
       关系代数
     </a>
   </li>
@@ -420,7 +428,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/retreat/relational-rule/" title="关系定律" class="md-nav__link">
+    <a href="../../retreat/relational-rule/" title="关系定律" class="md-nav__link">
       关系定律
     </a>
   </li>
@@ -432,7 +440,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/retreat/knowledge/" title="知识领域" class="md-nav__link">
+    <a href="../../retreat/knowledge/" title="知识领域" class="md-nav__link">
       知识领域
     </a>
   </li>
@@ -468,7 +476,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/basis/schedule/" title="调度" class="md-nav__link">
+    <a href="../../basis/schedule/" title="调度" class="md-nav__link">
       调度
     </a>
   </li>
@@ -480,7 +488,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/basis/network/" title="网络" class="md-nav__link">
+    <a href="../../basis/network/" title="网络" class="md-nav__link">
       网络
     </a>
   </li>
@@ -492,7 +500,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/basis/storage/" title="存储" class="md-nav__link">
+    <a href="../../basis/storage/" title="存储" class="md-nav__link">
       存储
     </a>
   </li>
@@ -504,7 +512,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/basis/compute/" title="计算" class="md-nav__link">
+    <a href="../../basis/compute/" title="计算" class="md-nav__link">
       计算
     </a>
   </li>
@@ -516,7 +524,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/basis/metrics/" title="度量" class="md-nav__link">
+    <a href="../../basis/metrics/" title="度量" class="md-nav__link">
       度量
     </a>
   </li>
@@ -552,7 +560,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/spark/schedule/" title="调度" class="md-nav__link">
+    <a href="../../spark/schedule/" title="调度" class="md-nav__link">
       调度
     </a>
   </li>
@@ -564,7 +572,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/spark/network/" title="网络" class="md-nav__link">
+    <a href="../../spark/network/" title="网络" class="md-nav__link">
       网络
     </a>
   </li>
@@ -576,7 +584,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/spark/storage/" title="存储" class="md-nav__link">
+    <a href="../../spark/storage/" title="存储" class="md-nav__link">
       存储
     </a>
   </li>
@@ -588,7 +596,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/spark/compute/" title="计算" class="md-nav__link">
+    <a href="../../spark/compute/" title="计算" class="md-nav__link">
       计算
     </a>
   </li>
@@ -600,7 +608,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/spark/metrics/" title="度量" class="md-nav__link">
+    <a href="../../spark/metrics/" title="度量" class="md-nav__link">
       度量
     </a>
   </li>
@@ -612,7 +620,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/spark/catalyst/" title="Catalyst" class="md-nav__link">
+    <a href="../../spark/catalyst/" title="Catalyst" class="md-nav__link">
       Catalyst
     </a>
   </li>
@@ -648,7 +656,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/presto/todo/" title="TODO" class="md-nav__link">
+    <a href="../../presto/todo/" title="TODO" class="md-nav__link">
       TODO
     </a>
   </li>
@@ -684,7 +692,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/hive/todo/" title="TODO" class="md-nav__link">
+    <a href="../../hive/todo/" title="TODO" class="md-nav__link">
       TODO
     </a>
   </li>
@@ -699,10 +707,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       TODO
@@ -720,7 +730,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/snappydata/todo/" title="SnappyData" class="md-nav__link">
+    <a href="../../snappydata/todo/" title="SnappyData" class="md-nav__link">
       SnappyData
     </a>
   </li>
@@ -732,7 +742,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/clickhouse/todo/" title="ClickHouse" class="md-nav__link">
+    <a href="../../clickhouse/todo/" title="ClickHouse" class="md-nav__link">
       ClickHouse
     </a>
   </li>
@@ -744,7 +754,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/kylin/todo/" title="Kylin" class="md-nav__link">
+    <a href="../../kylin/todo/" title="Kylin" class="md-nav__link">
       Kylin
     </a>
   </li>
@@ -756,7 +766,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/druid/todo/" title="Druid" class="md-nav__link">
+    <a href="../../druid/todo/" title="Druid" class="md-nav__link">
       Druid
     </a>
   </li>
@@ -768,7 +778,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/doris/todo/" title="Doris" class="md-nav__link">
+    <a href="../../doris/todo/" title="Doris" class="md-nav__link">
       Doris
     </a>
   </li>
@@ -780,7 +790,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/impala/todo/" title="Impala" class="md-nav__link">
+    <a href="../../impala/todo/" title="Impala" class="md-nav__link">
       Impala
     </a>
   </li>
@@ -790,11 +800,49 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/note.sql-engine/tidb/todo/" title="TiDB" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        TiDB
+      </label>
+    
+    <a href="./" title="TiDB" class="md-nav__link md-nav__link--active">
       TiDB
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -828,7 +876,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/practice/tuning-and-case/" title="调优与案例" class="md-nav__link">
+    <a href="../../practice/tuning-and-case/" title="调优与案例" class="md-nav__link">
       调优与案例
     </a>
   </li>
@@ -840,7 +888,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/practice/work-and-practices/" title="工作与实践" class="md-nav__link">
+    <a href="../../practice/work-and-practices/" title="工作与实践" class="md-nav__link">
       工作与实践
     </a>
   </li>
@@ -852,7 +900,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/practice/projects-and-articles/" title="项目与文章" class="md-nav__link">
+    <a href="../../practice/projects-and-articles/" title="项目与文章" class="md-nav__link">
       项目与文章
     </a>
   </li>
@@ -888,7 +936,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/appendix/appendix-a/" title="附录 A" class="md-nav__link">
+    <a href="../../appendix/appendix-a/" title="附录 A" class="md-nav__link">
       附录 A
     </a>
   </li>
@@ -900,7 +948,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/note.sql-engine/appendix/appendix-b/" title="附录 B" class="md-nav__link">
+    <a href="../../appendix/appendix-b/" title="附录 B" class="md-nav__link">
       附录 B
     </a>
   </li>
@@ -918,12 +966,51 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                  <a href="https://github.com/hyperj/note.sql-engine/blob/master/docs/tidb/todo.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+                
+                  
+                
+              
               
                 
 
@@ -936,6 +1023,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../impala/todo/" title="Impala" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Impala
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../practice/tuning-and-case/" title="调优与案例" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                调优与案例
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -954,7 +1076,7 @@
       
         
   <div class="md-footer-social">
-    <link rel="stylesheet" href="/note.sql-engine/assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
       <a href="https://hyperj.net" class="md-footer-social__link fa fa-h-square"></a>
     
@@ -971,9 +1093,9 @@
       
     </div>
     
-      <script src="/note.sql-engine/assets/javascripts/application.5e60981f.js"></script>
+      <script src="../../assets/javascripts/application.5e60981f.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/note.sql-engine"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
