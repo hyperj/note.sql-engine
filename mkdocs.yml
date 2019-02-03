@@ -104,7 +104,7 @@ nav:
   - Hive:
     - TODO: hive/todo.md
   - TODO:
-    - SnappyData: snappydata/todo.md
+    - SnappyData: snappydata/overview.md
     - ClickHouse: clickhouse/todo.md
     - Kylin: kylin/todo.md
     - Druid: druid/todo.md
