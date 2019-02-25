@@ -24,6 +24,10 @@
 - [Spark SQL: Relational Data Processing in Spark](https://amplab.cs.berkeley.edu/publication/spark-sql-relational-data-processing-in-spark/)
 - [Learning to Optimize Join Queries With Deep Reinforcement Learning](https://arxiv.org/abs/1808.03196)
 
+### SIGMOD
+
+- [Column-stores vs. row-stores: how different are they really?](http://db.csail.mit.edu/projects/cstore/abadi-sigmod08.pdf)
+
 ## Articles
 
 ## Resources
