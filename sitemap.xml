@@ -131,13 +131,13 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://hyperj.net/note.sql-engine/</loc>
+     <loc>https://hyperj.net/note.sql-engine/special/</loc>
      <lastmod>2019-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://hyperj.net/note.sql-engine/special/storege/</loc>
+     <lastmod>2019-02-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
