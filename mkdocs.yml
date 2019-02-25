@@ -113,8 +113,8 @@ nav:
     - Impala: impala/overview.md
     - TiDB: tidb/overview.md
   - 专题:
-    - 索引: index.md
-    - 存储: storege.md
+    - 索引: special/index.md
+    - 存储: special/storege.md
   - 其他:
     - Antlr: antlr/overview.md
     - Calcite: calcite/overview.md
