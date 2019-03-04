@@ -10,6 +10,7 @@ Doris is a MPP-based interactive SQL data warehousing for reporting and analysis
 ## Reference
 
 - [Docs](http://doris.apache.org/guides/documents.html)
+- [Wiki](https://github.com/apache/incubator-doris/wiki)
 - [Github](https://github.com/apache/incubator-doris)
 - [Palo - Baidu](https://cloud.baidu.com/doc/PALO/index.html)
 - [Doris development environment](https://hub.docker.com/r/apachedoris/doris-dev)
