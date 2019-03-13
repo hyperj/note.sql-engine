@@ -110,7 +110,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#todo" tabindex="1" class="md-skip">
+      <a href="#overview" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -973,6 +973,48 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#file-tail" title="File Tail" class="md-nav__link">
+    File Tail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" title="Compression" class="md-nav__link">
+    Compression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-length-encoding" title="Run Length Encoding" class="md-nav__link">
+    Run Length Encoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stripes" title="Stripes" class="md-nav__link">
+    Stripes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#column-encodings" title="Column Encodings" class="md-nav__link">
+    Column Encodings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexes" title="Indexes" class="md-nav__link">
+    Indexes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" title="Reference" class="md-nav__link">
     Reference
   </a>
@@ -1160,6 +1202,48 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#file-tail" title="File Tail" class="md-nav__link">
+    File Tail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression" title="Compression" class="md-nav__link">
+    Compression
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-length-encoding" title="Run Length Encoding" class="md-nav__link">
+    Run Length Encoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stripes" title="Stripes" class="md-nav__link">
+    Stripes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#column-encodings" title="Column Encodings" class="md-nav__link">
+    Column Encodings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexes" title="Indexes" class="md-nav__link">
+    Indexes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" title="Reference" class="md-nav__link">
     Reference
   </a>
@@ -1185,11 +1269,64 @@
                   <a href="https://github.com/hyperj/note.sql-engine/blob/master/docs/orc/overview.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
+                <h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
+<p>ORC（Optimized Row Columnar）使用特定的<code>Readers</code>和<code>Writers</code>，通过轻量级的数据压缩，如字典编码，位组装，差分编码和游程编码，而显著减小的生成文件，也可以配合zlib、Snappy使用。ORC 支持投影、下推、向量化、轻量级索引等特性。</p>
+<p><img alt="" src="../../assets/images/orc/OrcFileLayout.png" /></p>
+<h2 id="file-tail">File Tail<a class="headerlink" href="#file-tail" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Postscript</li>
+<li>Footer<ul>
+<li>Stripe Information</li>
+<li>Type Information</li>
+<li>Column Statistics</li>
+<li>User Metadata</li>
+<li>File Metadata</li>
+</ul>
+</li>
+</ul>
+<h2 id="compression">Compression<a class="headerlink" href="#compression" title="Permanent link">&para;</a></h2>
+<h2 id="run-length-encoding">Run Length Encoding<a class="headerlink" href="#run-length-encoding" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Base 128 Varint</li>
+<li>Byte Run Length Encoding</li>
+<li>Boolean Run Length Encoding</li>
+<li>Integer Run Length Encoding, version 1</li>
+<li>Integer Run Length Encoding, version 2<ul>
+<li>Short Repeat - used for short sequences with repeated values</li>
+<li>Direct - used for random sequences with a fixed bit width</li>
+<li>Patched Base - used for random sequences with a variable bit width</li>
+<li>Delta - used for monotonically increasing or decreasing sequences</li>
+</ul>
+</li>
+</ul>
+<h2 id="stripes">Stripes<a class="headerlink" href="#stripes" title="Permanent link">&para;</a></h2>
+<h2 id="column-encodings">Column Encodings<a class="headerlink" href="#column-encodings" title="Permanent link">&para;</a></h2>
+<ul>
+<li>SmallInt, Int, and BigInt Columns</li>
+<li>Float and Double Columns</li>
+<li>String, Char, and VarChar Columns</li>
+<li>Boolean Columns</li>
+<li>TinyInt Columns</li>
+<li>Binary Columns</li>
+<li>Decimal Columns</li>
+<li>Date Columns</li>
+<li>Timestamp Columns</li>
+<li>Struct Columns</li>
+<li>List Columns</li>
+<li>Map Columns</li>
+<li>Union Columns</li>
+</ul>
+<h2 id="indexes">Indexes<a class="headerlink" href="#indexes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Row Group Index</li>
+<li>Bloom Filter Index</li>
+</ul>
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="http://orc.apache.org/docs/">Docs</a></li>
 <li><a href="https://github.com/apache/orc">Github</a></li>
+<li><a href="https://orc.apache.org/specification/">ORC Specification</a></li>
+<li><a href="https://s.apache.org/orc_proto">orc_proto.proto</a></li>
 </ul>
                 
                   
