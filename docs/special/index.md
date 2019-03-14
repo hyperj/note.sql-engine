@@ -9,6 +9,7 @@
 - LSM-Tree
 - 空间索引（R-Tree、GeoHash）
 - 哈希索引（Hash）
+- LSH
 - 局部敏感哈希（Locality Sensitive Hashing）
     - SimHash
     - MinHash
@@ -27,6 +28,9 @@
 - 树
     - 红黑树（Red–black Tree）
     - 字典树（Trie Tree）
+
+- FractalTree
+- SlimTrie
 
 ## Reference
 
