@@ -146,6 +146,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://hyperj.net/note.sql-engine/special/sql-engine/</loc>
+     <lastmod>2019-07-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://hyperj.net/note.sql-engine/antlr/overview/</loc>
      <lastmod>2019-07-05</lastmod>
      <changefreq>daily</changefreq>
