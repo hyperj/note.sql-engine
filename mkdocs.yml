@@ -116,6 +116,7 @@ nav:
     - 索引: special/index.md
     - 存储: special/storege.md
     - 列存与向量化: special/columnar-and-vectorization.md
+    - SQL引擎: special/sql-engine.md
   - 其他:
     - Antlr: antlr/overview.md
     - Calcite: calcite/overview.md
